@@ -1,0 +1,6 @@
+framework module FlatColor {
+  umbrella header "FlatColor-umbrella.h"
+
+  export *
+  module * { export * }
+}

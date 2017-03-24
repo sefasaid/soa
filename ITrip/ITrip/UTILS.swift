@@ -10,5 +10,5 @@
 
 //MARK: - Project Cells
 
-var CELL_PD_INF = "CELL_PD_INF"
-
+var CELL_PD_TV_INF = "CELL_PD_TV_INF"
+var CELL_PD_CV_IMAGES = "CELL_PD_CV_IMAGES"

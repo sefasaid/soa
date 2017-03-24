@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FlatColor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ITrip.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5D1DA55C2C126F82981B2775877CD30F</key>
+		<key>5863A2DC067043F1C09D0FCA8A20A8A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF7D41FB026287D2069BC338EA9483CD</key>
+		<key>94977311FF226BEDB042F41EBE7326F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BCAE71EC594D1B9D501775579E1043BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

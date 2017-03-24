@@ -9,7 +9,7 @@
 import UIKit
 
 
-class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource {
     
     
     var c_View :View_PlaceDetail?
@@ -39,8 +39,24 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_PD_INF, forIndexPath: indexPath) as! Cell_PlaceDetail_Inf
+        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_PD_TV_INF, forIndexPath: indexPath) as! Cell_PD_TV_Inf
         
+        
+        return cell
+    }
+    
+    
+    //:MARK - CollectionView DataSource & Delegate
+    
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CELL_PD_CV_IMAGES, forIndexPath: indexPath) as! Cell_PD_CV_Images
         
         
         return cell
