@@ -17,11 +17,21 @@ app.use(methodOverride());
 
 mongoose.connect("mongodb://localhost:27017/soa");
 
-var City = app.resource = restful.model('city', mongoose.Schema({
+var City = app.resource = restful.model('cities', mongoose.Schema({
     il: Number,
     isim: String
 })).methods(['get', 'post', 'put', 'delete']);
 
 City.register(app, '/city');
+
+var Place = app.resource = restful.model('places', mongoose.Schema({
+    sehir : {type:mongoose.Schema.Types.ObjectId, ref:'cities'},
+    isim : String,
+    foto : [],
+    geo: {type: [Number], index: '2d'},
+    kategori : String
+})).methods(['get', 'post', 'put', 'delete']);
+
+Place.register(app, '/place');
 
 app.listen(3000);
