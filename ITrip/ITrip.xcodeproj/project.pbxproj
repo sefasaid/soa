@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D89AAA7F7218E11BDB564EA /* Pods_ITrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1DD4578826C93A9A4902BF /* Pods_ITrip.framework */; };
 		EFE5461F1E85C54F00A7B7B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5461E1E85C54F00A7B7B6 /* AppDelegate.swift */; };
 		EFE546211E85C54F00A7B7B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE546201E85C54F00A7B7B6 /* ViewController.swift */; };
-		EFE546241E85C54F00A7B7B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE546221E85C54F00A7B7B6 /* Main.storyboard */; };
 		EFE546261E85C54F00A7B7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE546251E85C54F00A7B7B6 /* Assets.xcassets */; };
 		EFE546291E85C54F00A7B7B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE546271E85C54F00A7B7B6 /* LaunchScreen.storyboard */; };
 		EFE546341E85C54F00A7B7B6 /* ITripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE546331E85C54F00A7B7B6 /* ITripTests.swift */; };
@@ -34,10 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45983E46D2369B5BE1640872 /* Pods-ITrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITrip/Pods-ITrip.debug.xcconfig"; sourceTree = "<group>"; };
+		59CB7AC3A303AE21EADD0152 /* Pods-ITrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITrip/Pods-ITrip.release.xcconfig"; sourceTree = "<group>"; };
+		EC1DD4578826C93A9A4902BF /* Pods_ITrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE5461B1E85C54F00A7B7B6 /* ITrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE5461E1E85C54F00A7B7B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE546201E85C54F00A7B7B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EFE546231E85C54F00A7B7B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFE546251E85C54F00A7B7B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFE546281E85C54F00A7B7B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFE5462A1E85C54F00A7B7B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D89AAA7F7218E11BDB564EA /* Pods_ITrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0E84467AE4D7428B4DCB800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC1DD4578826C93A9A4902BF /* Pods_ITrip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7B3B368D5D117E1D8BC82C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45983E46D2369B5BE1640872 /* Pods-ITrip.debug.xcconfig */,
+				59CB7AC3A303AE21EADD0152 /* Pods-ITrip.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EFE546121E85C54F00A7B7B6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,8 @@
 				EFE546321E85C54F00A7B7B6 /* ITripTests */,
 				EFE5463D1E85C54F00A7B7B6 /* ITripUITests */,
 				EFE5461C1E85C54F00A7B7B6 /* Products */,
+				C7B3B368D5D117E1D8BC82C8 /* Pods */,
+				A0E84467AE4D7428B4DCB800 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +121,6 @@
 			children = (
 				EFE5461E1E85C54F00A7B7B6 /* AppDelegate.swift */,
 				EFE546201E85C54F00A7B7B6 /* ViewController.swift */,
-				EFE546221E85C54F00A7B7B6 /* Main.storyboard */,
 				EFE546251E85C54F00A7B7B6 /* Assets.xcassets */,
 				EFE546271E85C54F00A7B7B6 /* LaunchScreen.storyboard */,
 				EFE5462A1E85C54F00A7B7B6 /* Info.plist */,
@@ -132,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFE546431E85C54F00A7B7B6 /* Build configuration list for PBXNativeTarget "ITrip" */;
 			buildPhases = (
+				57CDA237BEF55270845D2FCF /* [CP] Check Pods Manifest.lock */,
 				EFE546171E85C54F00A7B7B6 /* Sources */,
 				EFE546181E85C54F00A7B7B6 /* Frameworks */,
 				EFE546191E85C54F00A7B7B6 /* Resources */,
+				FC9D522125EA9BF21DCB088A /* [CP] Embed Pods Frameworks */,
+				ED5E6F2DD2841FDC21B48092 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,7 +255,6 @@
 			files = (
 				EFE546291E85C54F00A7B7B6 /* LaunchScreen.storyboard in Resources */,
 				EFE546261E85C54F00A7B7B6 /* Assets.xcassets in Resources */,
-				EFE546241E85C54F00A7B7B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +273,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57CDA237BEF55270845D2FCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED5E6F2DD2841FDC21B48092 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ITrip/Pods-ITrip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC9D522125EA9BF21DCB088A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ITrip/Pods-ITrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EFE546171E85C54F00A7B7B6 /* Sources */ = {
@@ -293,14 +364,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EFE546221E85C54F00A7B7B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EFE546231E85C54F00A7B7B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EFE546271E85C54F00A7B7B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -397,6 +460,7 @@
 		};
 		EFE546441E85C54F00A7B7B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45983E46D2369B5BE1640872 /* Pods-ITrip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ITrip/Info.plist;
@@ -408,6 +472,7 @@
 		};
 		EFE546451E85C54F00A7B7B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59CB7AC3A303AE21EADD0152 /* Pods-ITrip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ITrip/Info.plist;
