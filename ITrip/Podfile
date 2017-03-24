@@ -6,6 +6,7 @@ target 'ITrip' do
 use_frameworks!
 
 pod 'Alamofire','=3.4.1'
+pod 'SnapKit','=0.21.1'
 
 end
 #sudo gem install cocoapods -v 1.0.0
