@@ -72,6 +72,12 @@ function find_near(req, res, next) {
 }
 Place.register(app, '/place');
 
+var Tag = app.resource = restful.model('tag', mongoose.Schema({ß
+    isim: String
+})).methods(['get', 'post', 'put', 'delete']);
+
+Tag.register(app, '/tag');
+
 var User = app.resource = restful.model('user', mongoose.Schema({
     gender: String,
     name: {
