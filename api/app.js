@@ -25,12 +25,13 @@ var City = app.resource = restful.model('cities', mongoose.Schema({
 City.register(app, '/city');
 
 var Place = app.resource = restful.model('places', mongoose.Schema({
-    sehir : {type:mongoose.Schema.Types.ObjectId, ref:'cities'},
+    sehir : {type:mongoose.Schema.Types.ObjectId, ref:'cities' ,autopopulate: true},
     isim : String,
     foto : [],
     geo: {type: [Number], index: '2d'},
     kategori : String
-})).methods(['get', 'post', 'put', 'delete']);
+}).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
+
 Place.before('get', find_near);
 
 function find_near(req, res, next) {
@@ -56,7 +57,8 @@ function find_near(req, res, next) {
             }
         });
     }else if(req.query.search){
-        Place.find({isim: new RegExp(req.query.search, "i")}, function(err, place) {
+        Place.find({isim: new RegExp(req.query.search, "i")})
+            .exec(function(err, place) {
             if (!place) {
                 res.json({});
             } else {
