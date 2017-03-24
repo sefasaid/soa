@@ -55,7 +55,15 @@ function find_near(req, res, next) {
                 res.json(place);
             }
         });
-    }else{
+    }else if(req.query.search){
+        Place.find({isim: new RegExp(req.query.search, "i")}, function(err, place) {
+            if (!place) {
+                res.json({});
+            } else {
+                res.json(place);
+            }
+        })
+    } else{
         next();
     }
 
