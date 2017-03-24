@@ -101,8 +101,9 @@ var User = app.resource = restful.model('user', mongoose.Schema({
         medium: String,
         thumbnail: String
     },
-    nat: String
-})).methods(['get', 'post', 'put', 'delete']);
+    nat: String,
+    tag : {type:[mongoose.Schema.Types.ObjectId], ref:'tag' ,autopopulate: true}
+}).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
 
 User.before('get', random_user);
 function random_user(req, res, next) {
