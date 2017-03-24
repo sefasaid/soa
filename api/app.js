@@ -31,7 +31,35 @@ var Place = app.resource = restful.model('places', mongoose.Schema({
     geo: {type: [Number], index: '2d'},
     kategori : String
 })).methods(['get', 'post', 'put', 'delete']);
+Place.before('get', find_near);
 
+function find_near(req, res, next) {
+    var distance = 1000 / 5371;
+    if(req.query.lat && req.query.lng){
+        var query = Place.find({'geo': {
+            $nearSphere: [
+                req.query.lat,
+                req.query.lng
+            ],
+            $maxDistance: distance
+        }});
+
+        query.exec(function (err, place) {
+            if (err) {
+                console.log(err);
+            }
+
+            if (!place) {
+                res.json({});
+            } else {
+                res.json(place);
+            }
+        });
+    }else{
+        next();
+    }
+
+}
 Place.register(app, '/place');
 
 app.listen(3000);
