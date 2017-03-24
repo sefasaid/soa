@@ -15,12 +15,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(methodOverride());
 
-mongoose.connect("mongodb://localhost/soa");
+mongoose.connect("mongodb://localhost:27017/soa");
 
-var Resource = app.resource = restful.model('city', mongoose.Schema({
-    name: String
+var City = app.resource = restful.model('city', mongoose.Schema({
+    il: Number,
+    isim: String
 })).methods(['get', 'post', 'put', 'delete']);
 
-Resource.register(app, '/api/city');
+City.register(app, '/city');
 
 app.listen(3000);
