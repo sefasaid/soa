@@ -98,5 +98,29 @@ var User = app.resource = restful.model('user', mongoose.Schema({
     nat: String
 })).methods(['get', 'post', 'put', 'delete']);
 
+User.before('get', random_user);
+function random_user(req, res, next) {
+    if(req.query.rand != null && req.query.limit){
+        var limit = parseInt(req.query.limit)
+        User.count(function(err, count) {
+            if (err) {
+                return callback(err);
+            }
+            var rand = Math.floor(Math.random() * count);
+            console.log(rand);
+            User.find().skip(rand).limit(limit).exec(function (err,users) {
+                if(err)
+                    console.log(err);
+                if (!users) {
+                    res.json({});
+                } else {
+                    res.json(users);
+                }
+            });
+        });
+    }else{
+        next();
+    }
+}
 User.register(app, '/user');
 app.listen(1453);
