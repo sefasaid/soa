@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)
-        let itemsViewControler = Controller_Main()//baslicak olan class
+        let itemsViewControler = Controller_PlaceDetail()//baslicak olan class
         let navigationController:UINavigationController =
             UINavigationController(rootViewController: itemsViewControler)
         
