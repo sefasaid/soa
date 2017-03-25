@@ -33,7 +33,7 @@ func widthForView(text:String, font:UIFont) -> CGFloat{
     return label.frame.width
 }
 func localized(string:String) -> String {
-    return NSLocalizedString(string,comment:"")
+    return NSLocalizedString(string,comment:"a")
 }
 
 
