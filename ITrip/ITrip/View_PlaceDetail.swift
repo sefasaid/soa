@@ -107,7 +107,7 @@ class View_PlaceDetail: UIView {
             make.bottom.equalTo(self).offset(-30)
         }
         btn_GoAndFind.backgroundColor = UIColor.flatSkyBlueColor()
-        btn_GoAndFind.setTitle(localized("View_PlaceDetail_btn_GoAndFind"), forState: UIControlState.Normal)
+        btn_GoAndFind.setTitle(localized("btn_GoAndFind"), forState: UIControlState.Normal)
         btn_GoAndFind.layer.cornerRadius = self.frame.width/12
         btn_GoAndFind.addTarget(self.target, action: "actionForGoAndFind:", forControlEvents: UIControlEvents.TouchUpInside)
         

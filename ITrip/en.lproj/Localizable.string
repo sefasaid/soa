@@ -7,4 +7,4 @@
 */
 "START" = "Start";
 "NO_NET"  = "No Network";
-"View_PlaceDetail_btn_GoAndFind" = "I want to go";
+"btn_GoAndFind" = "I want to go";
