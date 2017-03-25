@@ -13,7 +13,7 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
 
     
     var btn_Call = UIButton()
-    var btn_Web = UIButton()
+    var btn_ = UIButton()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

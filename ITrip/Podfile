@@ -20,6 +20,7 @@ pod 'ActionSheetPicker-3.0'
 pod 'SwiftyJSON', '2.4.0'
 pod 'ReachabilitySwift', '~> 2.4'
 pod 'CWStatusBarNotification'
+pod 'SDWebImage', :git => 'https://github.com/rs/SDWebImage'
 
 
 end
