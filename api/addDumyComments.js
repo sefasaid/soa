@@ -55,7 +55,7 @@ Place.find({}, function (err, places) {
         var rand = Math.floor(Math.random() * 5000);
         var limit = Math.floor(Math.random() * 10);
 
-        User.find({}, '_id').skip(rand).limit(limit).exec(function (err, users) {
+        User.find().skip(rand).limit(limit).exec(function (err, users) {
             if (err)
                 console.log(err);
             users.forEach(function (user) {
