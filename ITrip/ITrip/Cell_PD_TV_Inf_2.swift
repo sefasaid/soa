@@ -54,6 +54,7 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
         btn_Call.imageEdgeInsets = UIEdgeInsets(top: 20, left: 80, bottom: 30, right: 75)
         btn_Call.titleEdgeInsets = UIEdgeInsets(top: 25, left: -30, bottom: 0, right: 60)
         btn_Call.titleLabel?.font = UIFont.appBoldFont(14)
+        btn_Call.addTarget(self, action: #selector(Cell_PD_TV_Inf_2.callClicked), forControlEvents: UIControlEvents.TouchUpInside)
         
         
         
@@ -71,10 +72,34 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
         btn_Web.imageEdgeInsets = UIEdgeInsets(top: 20, left: 80, bottom: 30, right: 75)
         btn_Web.titleEdgeInsets = UIEdgeInsets(top: 25, left: -30, bottom: 0, right: 60)
         btn_Web.titleLabel?.font = UIFont.appBoldFont(14)
+        btn_Web.addTarget(self, action: #selector(Cell_PD_TV_Inf_2.webClicked), forControlEvents: UIControlEvents.TouchUpInside )
         
         
         self.contentView.setNeedsLayout()
         self.contentView.layoutIfNeeded()
     }
+    
+    func callClicked(){
+        //print("arama")
+        if let url = NSURL(string: "tel://\(905448572632)") where UIApplication.sharedApplication().canOpenURL(url) {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
+    func webClicked(){
+        //print("web sitesi")
+        if let url = NSURL(string: "http://www.google.com.tr") {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
 
 }
+
+
+
+
+
+
+
+
+

@@ -24,7 +24,8 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         self.navigationController!.navigationBar.translucent = true
         self.navigationController!.view.backgroundColor = UIColor.clearColor()
         self.navigationBackGroundColor(UIColor.clearColor(), tintC: UIColor.whiteColor())
-
+        
+        self.navigationController!.navigationBar.topItem!.title = "";
         
         s_Arr.append("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
         s_Arr.append("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons")
@@ -143,6 +144,16 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         
         
         return cell
+    }
+    
+    
+    
+    //:MARK - Action For Buttons
+    
+    func actionForGoAndFind(sender:UIButton){
+    
+        
+        self.navigationController?.pushViewController(Controller_SendForm(), animated: true)
     }
     
     

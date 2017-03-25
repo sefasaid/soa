@@ -107,7 +107,7 @@ class View_PlaceDetail: UIView {
         btn_GoAndFind.backgroundColor = UIColor.flatSkyBlueColor()
         btn_GoAndFind.setTitle("Gitmek Istiyorum", forState: UIControlState.Normal)
         btn_GoAndFind.layer.cornerRadius = self.frame.width/12
-        
+        btn_GoAndFind.addTarget(self.target, action: "actionForGoAndFind:", forControlEvents: UIControlEvents.TouchUpInside)
     
     }
     

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ASJTagsView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,6 +20,11 @@
 			<false/>
 		</dict>
 		<key>FlatColor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E80FDDE5B3AEE7B5AD0CB3C96FF3F70</key>
+		<key>7BBC6DF901F67FBEAE6BD8B260B03640</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +72,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8C6AA07AADF776F6BC6520CB8CBC8E28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9AE22B36015F3108E64658B5EB66AE29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B54A05BC8A6E96E629D8BC7A2E70816A</key>
+		<key>BCAE71EC594D1B9D501775579E1043BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BCAE71EC594D1B9D501775579E1043BE</key>
+		<key>C36CB2CB977A4E7D954935096D00A1ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>F67CE1B6AB33434F5E92A8811F3B4EFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F90086F8476AC825F7B1388C8DF8D9B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

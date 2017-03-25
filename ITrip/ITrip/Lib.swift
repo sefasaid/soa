@@ -21,6 +21,17 @@ func heightToText(text:String, font:UIFont, width:CGFloat) -> CGFloat{
     label.sizeToFit()
     return label.frame.height
 }
+func widthForView(text:String, font:UIFont) -> CGFloat{
+    
+    let label:UILabel = UILabel(frame: CGRectMake(0, 0, CGFloat.max, CGFloat.max))
+    label.numberOfLines = 0
+    label.lineBreakMode = NSLineBreakMode.ByWordWrapping
+    label.font = font
+    label.text = text
+    
+    label.sizeToFit()
+    return label.frame.width
+}
 
 
 
