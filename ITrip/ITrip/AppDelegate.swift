@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
       
+        let backImg: UIImage = UIImage(named: "back_button")!
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backImg, forState: .Normal, barMetrics: .Default)
+        
+
+        
         
         
         let frame = UIScreen.mainScreen().bounds
