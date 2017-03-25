@@ -12,6 +12,9 @@ PODS:
   - KVOController (1.0.3)
   - MXParallaxHeader (0.6.0)
   - ReachabilitySwift (2.4)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SnapKit (0.21.1)
   - SwiftyJSON (2.4.0)
 
@@ -25,8 +28,18 @@ DEPENDENCIES:
   - JMEParallaxView
   - MXParallaxHeader
   - ReachabilitySwift (~> 2.4)
+  - SDWebImage (from `https://github.com/rs/SDWebImage`)
   - SnapKit (= 0.21.1)
   - SwiftyJSON (= 2.4.0)
+
+EXTERNAL SOURCES:
+  SDWebImage:
+    :git: https://github.com/rs/SDWebImage
+
+CHECKOUT OPTIONS:
+  SDWebImage:
+    :commit: ad9f1a24360b2c7581f136e3bd987ff700862ce7
+    :git: https://github.com/rs/SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
@@ -39,9 +52,10 @@ SPEC CHECKSUMS:
   KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
   MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
   ReachabilitySwift: dc7452dab85ff881904215e1a113326ad8d07beb
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
   SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
 
-PODFILE CHECKSUM: ce1b2dfe893faa47022b14ab10c76e2555aed103
+PODFILE CHECKSUM: 0566c7c4b801d5017955385bbce7b945cbaefa8a
 
 COCOAPODS: 1.0.1

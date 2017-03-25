@@ -13,8 +13,20 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     var c_View :View_PlaceDetail?
-    
     var s_Arr = [String]()
+    var place = Place()
+    
+    
+    
+    init(place:Place){
+        super.init(nibName: nil, bundle: nil)
+    
+        self.place = place
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +52,10 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         
         self.c_View = View_PlaceDetail(frame: self.view.frame, target: self)
         self.view.addSubview(self.c_View!)
+        
+        
+        
+        self.c_View?.lbl_Title.text = self.place.name
 
         
     }
@@ -62,14 +78,10 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = nil
         self.navigationController!.navigationBar.translucent = false
-        //self.navigationController!.view.backgroundColor = UIColor.clearColor()
-         self.navigationBackGroundColor(UIColor.grayColor(), tintC: UIColor.whiteColor())
-        //navigationBarBackImage(UIImage(named: "navigationimg")!)
+        self.navigationBackGroundColor(UIColor.grayColor(), tintC: UIColor.whiteColor())
+        
         
     }
-
-    
-    
     
     //:MARK - TableView DataSource & Delegate
     
@@ -91,11 +103,12 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
        
         if(indexPath.row == 0 && indexPath.section == 0){
             let cell = tableView.dequeueReusableCellWithIdentifier(CELL_PD_TV_INF, forIndexPath: indexPath) as! Cell_PD_TV_Inf
-            
+            cell.lbl_Title.text = place.name
             
             return cell
         }else if(indexPath.row == 1 && indexPath.section == 0){
             let cell = tableView.dequeueReusableCellWithIdentifier(CELL_PD_TV_INF_2, forIndexPath: indexPath) as! Cell_PD_TV_Inf_2
+            cell.btn_Web
             
             
             return cell
