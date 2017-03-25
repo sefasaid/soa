@@ -83,6 +83,10 @@ class Cell_PD_TV_Inf: UITableViewCell {
         lbl_Trips.textColor = UIColor.flatGrayColor()
         lbl_Trips.font = UIFont.appFont(12)
         
+        
+        self.contentView.setNeedsLayout()
+        self.contentView.layoutIfNeeded()
+        
     
     }
     

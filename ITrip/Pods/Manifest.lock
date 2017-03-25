@@ -4,26 +4,41 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - FlatColor (1.1)
+<<<<<<< HEAD
   - JMEParallaxView (1.0.5):
     - KVOController (~> 1.0.1)
   - KVOController (1.0.3)
+=======
+  - MXParallaxHeader (0.6.0)
+>>>>>>> origin/IOS
   - SnapKit (0.21.1)
 
 DEPENDENCIES:
   - Alamofire (= 3.4.1)
   - ChameleonFramework/Swift
   - FlatColor
+<<<<<<< HEAD
   - JMEParallaxView
+=======
+  - MXParallaxHeader
+>>>>>>> origin/IOS
   - SnapKit (= 0.21.1)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   FlatColor: a9cc6991f1c75a940df70109bdc34c5db341b8ee
+<<<<<<< HEAD
   JMEParallaxView: 8e997eba10abe283f6c1cb27d4058430cdb307c0
   KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
 
 PODFILE CHECKSUM: a9055cd6559812f06a92d91947dc6e60dba2c7c5
+=======
+  MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+
+PODFILE CHECKSUM: 4ed4f4227cba40779efe03eb7ab8fa94e3eac053
+>>>>>>> origin/IOS
 
 COCOAPODS: 1.1.1
