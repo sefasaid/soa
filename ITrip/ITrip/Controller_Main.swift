@@ -42,6 +42,11 @@ class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSourc
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detail = Controller_PlaceDetail()
+        self.navigationController?.pushViewController(detail, animated: true)
+    }
 
 
 

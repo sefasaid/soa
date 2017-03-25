@@ -22,3 +22,19 @@ func heightToText(text:String, font:UIFont, width:CGFloat) -> CGFloat{
     return label.frame.height
 }
 
+
+
+
+extension UIViewController{
+
+    func navigationBackGroundColor(backGColor:UIColor,tintC:UIColor){
+        
+        self.navigationController!.navigationBar.tintColor = tintC
+        self.navigationController!.navigationBar.barTintColor = backGColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        
+    }
+    
+}
+

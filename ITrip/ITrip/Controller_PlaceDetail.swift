@@ -15,10 +15,16 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
     var c_View :View_PlaceDetail?
     
     var s_Arr = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-    
+
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        self.navigationController!.view.backgroundColor = UIColor.clearColor()
+        self.navigationBackGroundColor(UIColor.clearColor(), tintC: UIColor.whiteColor())
+
         
         s_Arr.append("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
         s_Arr.append("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons")
@@ -37,6 +43,30 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        self.navigationController!.view.backgroundColor = UIColor.clearColor()
+        
+        
+        self.navigationBackGroundColor(UIColor.clearColor(), tintC: UIColor.whiteColor())
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        
+        self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = nil
+        self.navigationController!.navigationBar.translucent = false
+        //self.navigationController!.view.backgroundColor = UIColor.clearColor()
+         self.navigationBackGroundColor(UIColor.grayColor(), tintC: UIColor.whiteColor())
+        //navigationBarBackImage(UIImage(named: "navigationimg")!)
+        
+    }
+
     
     
     

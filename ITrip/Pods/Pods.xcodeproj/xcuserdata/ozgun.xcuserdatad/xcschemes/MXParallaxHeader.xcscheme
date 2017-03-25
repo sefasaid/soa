@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '68720A958606C0AB9BA102945583AA49'
-               BlueprintName = 'SnapKit'
+               BlueprintIdentifier = 'E75E5BAC0FE6E4C6A5E5F95EA6807F8A'
+               BlueprintName = 'MXParallaxHeader'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SnapKit.framework'>
+               BuildableName = 'MXParallaxHeader.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

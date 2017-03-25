@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-
+import MXParallaxHeader
 
 class View_PlaceDetail: UIView {
     
@@ -41,6 +41,14 @@ class View_PlaceDetail: UIView {
         
         
         
+        let view_Header = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height/2.7))
+        view_Header.backgroundColor = UIColor.yellowColor()
+        view_Header.layoutIfNeeded()
+        view_Header.setNeedsLayout()
+        view_Header.translatesAutoresizingMaskIntoConstraints = true
+        view_Header.autoresizingMask = [UIViewAutoresizing.FlexibleHeight,UIViewAutoresizing.FlexibleWidth]
+
+        
         
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -49,6 +57,7 @@ class View_PlaceDetail: UIView {
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
+
         
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height/2.7), collectionViewLayout: layout)
         collectionView.dataSource = target
@@ -56,6 +65,11 @@ class View_PlaceDetail: UIView {
         collectionView.registerClass(Cell_PD_CV_Images.self, forCellWithReuseIdentifier: CELL_PD_CV_IMAGES)
         collectionView.backgroundColor = UIColor.clearColor()
         collectionView.pagingEnabled = true
+        collectionView.translatesAutoresizingMaskIntoConstraints = true
+        collectionView.autoresizingMask = [UIViewAutoresizing.FlexibleHeight,UIViewAutoresizing.FlexibleWidth]
+        collectionView.backgroundColor = UIColor.hexColor(0xF9F9F9)
+        // view_Header.addSubview(collectionView)
+        
 
         
         
@@ -64,7 +78,7 @@ class View_PlaceDetail: UIView {
         //----- Draw TableView
         self.addSubview(tableView)
         tableView.snp_makeConstraints { (make) in
-            make.top.equalTo(self)
+            make.top.equalTo(self).offset(-64)
             make.bottom.equalTo(self)
             make.left.equalTo(self)
             make.right.equalTo(self)
@@ -75,7 +89,14 @@ class View_PlaceDetail: UIView {
         tableView.registerClass(Cell_PD_TV_Inf.self, forCellReuseIdentifier: CELL_PD_TV_INF)
         tableView.registerClass(Cell_PD_TV_Inf_2.self, forCellReuseIdentifier: CELL_PD_TV_INF_2)
         tableView.registerClass(Cell_PD_TV_Review.self, forCellReuseIdentifier: CELL_PD_TV_REVIEW)
-        tableView.tableHeaderView = collectionView
+        tableView.parallaxHeader.view = collectionView
+        tableView.parallaxHeader.height = self.frame.height/2.7;
+        tableView.parallaxHeader.mode = MXParallaxHeaderMode.Top
+        tableView.parallaxHeader.minimumHeight = 64;
+
+        
+        
+        
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
     

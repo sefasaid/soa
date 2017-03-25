@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		107C50DA1E85C03700FB85C0 /* View_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50D91E85C03700FB85C0 /* View_Main.swift */; };
 		107C50DC1E85C52100FB85C0 /* Cell_MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50DB1E85C52100FB85C0 /* Cell_MainList.swift */; };
+		B7F0807CEA217D442789ED87 /* Pods_ITrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1DD4578826C93A9A4902BF /* Pods_ITrip.framework */; };
 		EFB5BEB11E85E36C0055A190 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB5BEAC1E85E36C0055A190 /* Alamofire.framework */; };
 		EFB5BEB21E85E36C0055A190 /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB5BEAD1E85E36C0055A190 /* ChameleonFramework.framework */; };
 		EFB5BEB31E85E36C0055A190 /* FlatColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB5BEAE1E85E36C0055A190 /* FlatColor.framework */; };
@@ -17,6 +18,7 @@
 		EFDDEB0E1E85ED6100097BA4 /* Cell_PD_TV_Inf_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDEB0D1E85ED6100097BA4 /* Cell_PD_TV_Inf_2.swift */; };
 		EFDDEB101E85FCE800097BA4 /* Lib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDEB0F1E85FCE800097BA4 /* Lib.swift */; };
 		EFDDEB121E85FD1600097BA4 /* Cell_PD_TV_Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDEB111E85FD1600097BA4 /* Cell_PD_TV_Review.swift */; };
+		EFDDEB141E860A9E00097BA4 /* MXParallaxHeader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDDEB131E860A9E00097BA4 /* MXParallaxHeader.framework */; };
 		EFE5461F1E85C54F00A7B7B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5461E1E85C54F00A7B7B6 /* AppDelegate.swift */; };
 		EFE546211E85C54F00A7B7B6 /* Controller_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE546201E85C54F00A7B7B6 /* Controller_Main.swift */; };
 		EFE546261E85C54F00A7B7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE546251E85C54F00A7B7B6 /* Assets.xcassets */; };
@@ -62,6 +64,7 @@
 		EFDDEB0D1E85ED6100097BA4 /* Cell_PD_TV_Inf_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_PD_TV_Inf_2.swift; sourceTree = "<group>"; };
 		EFDDEB0F1E85FCE800097BA4 /* Lib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lib.swift; sourceTree = "<group>"; };
 		EFDDEB111E85FD1600097BA4 /* Cell_PD_TV_Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_PD_TV_Review.swift; sourceTree = "<group>"; };
+		EFDDEB131E860A9E00097BA4 /* MXParallaxHeader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MXParallaxHeader.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ITrip-arujnjizfilmnrgzhuwwnyjxtpih/Build/Products/Debug-iphonesimulator/MXParallaxHeader/MXParallaxHeader.framework"; sourceTree = "<group>"; };
 		EFE5461B1E85C54F00A7B7B6 /* ITrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE5461E1E85C54F00A7B7B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE546201E85C54F00A7B7B6 /* Controller_Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller_Main.swift; sourceTree = "<group>"; };
@@ -91,11 +94,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFDDEB141E860A9E00097BA4 /* MXParallaxHeader.framework in Frameworks */,
 				EFB5BEB11E85E36C0055A190 /* Alamofire.framework in Frameworks */,
 				EFB5BEB21E85E36C0055A190 /* ChameleonFramework.framework in Frameworks */,
 				EFB5BEB31E85E36C0055A190 /* FlatColor.framework in Frameworks */,
 				EFB5BEB41E85E36C0055A190 /* Pods_ITrip.framework in Frameworks */,
 				EFB5BEB51E85E36C0055A190 /* SnapKit.framework in Frameworks */,
+				B7F0807CEA217D442789ED87 /* Pods_ITrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +134,7 @@
 		A0E84467AE4D7428B4DCB800 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFDDEB131E860A9E00097BA4 /* MXParallaxHeader.framework */,
 				EFB5BEAC1E85E36C0055A190 /* Alamofire.framework */,
 				EFB5BEAD1E85E36C0055A190 /* ChameleonFramework.framework */,
 				EFB5BEAE1E85E36C0055A190 /* FlatColor.framework */,

@@ -39,6 +39,16 @@ class Cell_PD_CV_Images: UICollectionViewCell {
             make.right.equalTo(self)
         }
         img_BackGround.backgroundColor = UIColor.grayColor()
+        img_BackGround.layer.masksToBounds = true
+        img_BackGround.contentMode = UIViewContentMode.ScaleAspectFill
+        img_BackGround.image = UIImage(named: "ayasofya-1")
+        // img_BackGround.translatesAutoresizingMaskIntoConstraints = true
+         img_BackGround.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+
+        
+        self.contentView.setNeedsLayout()
+        self.contentView.layoutIfNeeded()
+
         
         
     }

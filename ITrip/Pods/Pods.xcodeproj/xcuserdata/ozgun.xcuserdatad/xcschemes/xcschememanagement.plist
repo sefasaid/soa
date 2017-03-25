@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MXParallaxHeader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ITrip.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5863A2DC067043F1C09D0FCA8A20A8A1</key>
+		<key>68720A958606C0AB9BA102945583AA49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>94977311FF226BEDB042F41EBE7326F8</key>
+		<key>A475F723BB9C9004618E14AA0865A1FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BCAE71EC594D1B9D501775579E1043BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E75E5BAC0FE6E4C6A5E5F95EA6807F8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

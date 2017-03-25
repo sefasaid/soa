@@ -4,20 +4,23 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - FlatColor (1.1)
+  - MXParallaxHeader (0.6.0)
   - SnapKit (0.21.1)
 
 DEPENDENCIES:
   - Alamofire (= 3.4.1)
   - ChameleonFramework/Swift
   - FlatColor
+  - MXParallaxHeader
   - SnapKit (= 0.21.1)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   FlatColor: a9cc6991f1c75a940df70109bdc34c5db341b8ee
+  MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
 
-PODFILE CHECKSUM: aca593feba93e1c0e2050b3c7fc0207e7a559d23
+PODFILE CHECKSUM: 4ed4f4227cba40779efe03eb7ab8fa94e3eac053
 
 COCOAPODS: 1.0.1
