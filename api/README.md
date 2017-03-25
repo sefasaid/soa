@@ -54,14 +54,14 @@ endpoint olarak /comment kullanıyoruz
 Comment tek başına kullanılmayacak çünkü konumları çekerken içinde hazır olarak geliyor. Bu yüzden tek başına kullanılması gereksiz
 
 # Kullanılan paketler
--[node-restful](https://github.com/baugarten/node-restful)(zaten çoğu işi yapan paket :) )
--[mongoose](https://github.com/Automattic/mongoose) 
--[express](https://github.com/expressjs/express)
--[body-parser](https://github.com/expressjs/body-parser)
+- [node-restful](https://github.com/baugarten/node-restful)(zaten çoğu işi yapan paket :) )
+- [mongoose](https://github.com/Automattic/mongoose) 
+- [express](https://github.com/expressjs/express)
+- [body-parser](https://github.com/expressjs/body-parser)
 
 # Dumy data alınan yer
--user için [randomuser.me](https://randomuser.me)
--lokasyon için 
+- user için [randomuser.me](https://randomuser.me)
+- lokasyon için 
 
 # Teşekkürler
 [getir](https://getir.com/) & [bitaksi](http://www.bitaksi.com/)
