@@ -73,6 +73,8 @@ class View_PlaceDetail: UIView {
         tableView.dataSource = self.target
         tableView.rowHeight = 70
         tableView.registerClass(Cell_PD_TV_Inf.self, forCellReuseIdentifier: CELL_PD_TV_INF)
+        tableView.registerClass(Cell_PD_TV_Inf_2.self, forCellReuseIdentifier: CELL_PD_TV_INF_2)
+        tableView.registerClass(Cell_PD_TV_Review.self, forCellReuseIdentifier: CELL_PD_TV_REVIEW)
         tableView.tableHeaderView = collectionView
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
