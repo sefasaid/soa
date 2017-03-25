@@ -19,6 +19,7 @@
     "method-override": "^2.3.7",
     "mongoose": "^4.9.1",
     "mongoose-autopopulate": "^0.5.0",
-    "morgan": "^1.8.1"
+    "morgan": "^1.8.1",
+    "requestify": "^0.2.5"
   }
 }
