@@ -75,6 +75,7 @@ Place.after('get', get_redis);
 
 function find_near(req, res, next) {
     var distance = 1000 / 5371;
+
     if(req.query.lat && req.query.lng){
         var query = Place.find({'geo': {
             $nearSphere: [
@@ -104,7 +105,7 @@ function find_near(req, res, next) {
                 res.json(place);
             }
         })
-    }else if(req.query.length == undefined){
+    }else if(Object.keys(req.query).length === 0){
         redis.get('places', function (err, reply) {
             if (err) callback(null);
             else if (reply){
@@ -122,9 +123,10 @@ function get_redis(req,res,next) {
     if(req.query.length == undefined){
         redis.set('places', JSON.stringify(res.locals.bundle), function () {
             console.log("SAVİNG TO REDİS");
+            redis.expire('places', 30);
+
             next();
         });
-        redis.expire('places', 120);
     }else{
         next();
     }
