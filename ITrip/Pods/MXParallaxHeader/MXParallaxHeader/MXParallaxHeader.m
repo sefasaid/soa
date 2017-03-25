@@ -1,6 +1,6 @@
 // MXParallaxHeader.m
 //
-// Copyright (c) 2017 Maxime Epain
+// Copyright (c) 2015 Maxime Epain
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -115,14 +115,9 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
     }
 }
 
-- (void)setProgress:(CGFloat)progress {
-    if(_progress != progress) {
-        _progress = progress;
-        
-        if ([self.delegate respondsToSelector:@selector(parallaxHeaderDidScroll:)]) {
-            [self.delegate parallaxHeaderDidScroll:self];
-        }
-    }
+- (CGFloat)progress {
+    CGFloat div = self.height - self.minimumHeight;
+    return (self.contentView.frame.size.height - self.minimumHeight) / (div? : self.height);
 }
 
 #pragma mark Constraints
@@ -217,17 +212,12 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
     CGFloat relativeYOffset = self.scrollView.contentOffset.y + self.scrollView.contentInset.top - self.height;
     CGFloat relativeHeight  = -relativeYOffset;
     
-    CGRect frame = (CGRect){
+    self.contentView.frame = (CGRect){
         .origin.x       = 0,
         .origin.y       = relativeYOffset,
         .size.width     = self.scrollView.frame.size.width,
         .size.height    = MAX(relativeHeight, minimumHeight)
     };
-    
-    self.contentView.frame = frame;
-    
-    CGFloat div = self.height - self.minimumHeight;
-    self.progress = (self.contentView.frame.size.height - self.minimumHeight) / (div? : self.height);
 }
 
 - (void)adjustScrollViewTopInset:(CGFloat)top {
@@ -252,6 +242,10 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
         
         if ([keyPath isEqualToString:NSStringFromSelector(@selector(contentOffset))]) {
             [self layoutContentView];
+            
+            if ([self.delegate respondsToSelector:@selector(parallaxHeaderDidScroll:)]) {
+                [self.delegate parallaxHeaderDidScroll:self];
+            }
         }
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];

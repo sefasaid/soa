@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
   - Alamofire (3.4.1)
   - ASJTagsView (1.1)
   - ChameleonFramework/Default (2.1.0)
@@ -19,6 +20,7 @@ PODS:
   - SwiftyJSON (2.4.0)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - Alamofire (= 3.4.1)
   - ASJTagsView
   - ChameleonFramework/Swift
@@ -42,6 +44,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/rs/SDWebImage
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ASJTagsView: fc7526f5d76fd2a07a011b232a03a6d2b0a9dad1
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
@@ -56,6 +59,6 @@ SPEC CHECKSUMS:
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
   SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
 
-PODFILE CHECKSUM: 0566c7c4b801d5017955385bbce7b945cbaefa8a
+PODFILE CHECKSUM: c07633bc34990e3e41a9e8bfbfef4176119cc155
 
 COCOAPODS: 1.0.1

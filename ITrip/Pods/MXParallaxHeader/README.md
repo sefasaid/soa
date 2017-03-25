@@ -22,6 +22,8 @@ If you want to try it, simply run:
 pod try MXParallaxHeader
 ```
 
+Or clone the repo and run `pod install` from the Example directory first.
+
 + Adding a parallax header to a UIScrollView is straightforward, e.g:
 
 ```objective-c
