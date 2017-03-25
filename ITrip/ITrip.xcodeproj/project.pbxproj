@@ -61,6 +61,7 @@
 		102F1AA11E85E2B1007143B1 /* ITrip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ITrip-Bridging-Header.h"; sourceTree = "<group>"; };
 		107C50D91E85C03700FB85C0 /* View_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View_Main.swift; sourceTree = "<group>"; };
 		107C50DB1E85C52100FB85C0 /* Cell_MainList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_MainList.swift; sourceTree = "<group>"; };
+		10AA496B1E86FE53007A9A2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Localizable.string; sourceTree = "<group>"; };
 		51AC133DD9CBDA79772F0E9B /* Pods-ITrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITrip/Pods-ITrip.release.xcconfig"; sourceTree = "<group>"; };
 		6D1AA84218DDE9E7FDA336D3 /* Pods_ITrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C73859EE163354D416212DA /* Pods-ITrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITrip/Pods-ITrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -570,6 +571,7 @@
 			children = (
 				EFAA718D1E86B0A2000807FA /* Base */,
 				EFAA71901E86B0A4000807FA /* tr */,
+				10AA496B1E86FE53007A9A2E /* en */,
 			);
 			name = Localizable.string;
 			sourceTree = "<group>";

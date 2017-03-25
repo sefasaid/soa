@@ -58,7 +58,6 @@ class Cell_MainList: UITableViewCell {
             make.right.equalTo(self)
             make.left.equalTo(self)
         }
-        PlaceName.text = "Aya Sofya Camisi"
         PlaceName.textColor = UIColor.flatWhiteColor()
         PlaceName.font = UIFont.appBoldFont(22)
         PlaceName.textAlignment = NSTextAlignment.Center
