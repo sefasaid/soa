@@ -31,6 +31,7 @@ var User = restful.model('user', mongoose.Schema({
 }).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
 
 User.before('get', random_user);
+
 function random_user(req, res, next) {
     if(req.query.rand != null && req.query.limit){
         var limit = parseInt(req.query.limit)
