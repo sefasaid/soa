@@ -1,18 +1,9 @@
-ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-<<<<<<< HEAD
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework" "$PODS_CONFIGURATION_BUILD_DIR/FlatColor" "$PODS_CONFIGURATION_BUILD_DIR/JMEParallaxView" "$PODS_CONFIGURATION_BUILD_DIR/KVOController" "$PODS_CONFIGURATION_BUILD_DIR/SnapKit"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework" "$PODS_CONFIGURATION_BUILD_DIR/FlatColor" "$PODS_CONFIGURATION_BUILD_DIR/JMEParallaxView" "$PODS_CONFIGURATION_BUILD_DIR/KVOController" "$PODS_CONFIGURATION_BUILD_DIR/MXParallaxHeader" "$PODS_CONFIGURATION_BUILD_DIR/SnapKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/FlatColor/FlatColor.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/JMEParallaxView/JMEParallaxView.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/KVOController/KVOController.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SnapKit/SnapKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "ChameleonFramework" -framework "FlatColor" -framework "JMEParallaxView" -framework "KVOController" -framework "SnapKit"
-=======
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework" "$PODS_CONFIGURATION_BUILD_DIR/FlatColor" "$PODS_CONFIGURATION_BUILD_DIR/MXParallaxHeader" "$PODS_CONFIGURATION_BUILD_DIR/SnapKit"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/FlatColor/FlatColor.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MXParallaxHeader/MXParallaxHeader.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SnapKit/SnapKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "ChameleonFramework" -framework "FlatColor" -framework "MXParallaxHeader" -framework "SnapKit"
->>>>>>> origin/IOS
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/FlatColor/FlatColor.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/JMEParallaxView/JMEParallaxView.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/KVOController/KVOController.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MXParallaxHeader/MXParallaxHeader.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SnapKit/SnapKit.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "ChameleonFramework" -framework "FlatColor" -framework "JMEParallaxView" -framework "KVOController" -framework "MXParallaxHeader" -framework "SnapKit"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

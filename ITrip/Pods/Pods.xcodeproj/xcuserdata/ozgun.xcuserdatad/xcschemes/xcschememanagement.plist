@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JMEParallaxView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KVOController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MXParallaxHeader.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>68720A958606C0AB9BA102945583AA49</key>
+		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
+		<key>7E80FDDE5B3AEE7B5AD0CB3C96FF3F70</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A475F723BB9C9004618E14AA0865A1FD</key>
+		<key>9AE22B36015F3108E64658B5EB66AE29</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B54A05BC8A6E96E629D8BC7A2E70816A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +78,11 @@
 			<true/>
 		</dict>
 		<key>E75E5BAC0FE6E4C6A5E5F95EA6807F8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F67CE1B6AB33434F5E92A8811F3B4EFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
