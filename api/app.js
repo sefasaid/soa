@@ -24,12 +24,21 @@ var City = app.resource = restful.model('cities', mongoose.Schema({
 
 City.register(app, '/city');
 
+var Comment = app.resource = restful.model('comment', mongoose.Schema({
+    yorum: String,
+    kullanici : {type:[mongoose.Schema.Types.ObjectId], ref:'user' ,autopopulate: true}
+}).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
+
+Comment.register(app, '/comment');
+
+
 var Place = app.resource = restful.model('places', mongoose.Schema({
     sehir : {type:mongoose.Schema.Types.ObjectId, ref:'cities' ,autopopulate: true},
     isim : String,
     foto : [],
     geo: {type: [Number], index: '2d'},
-    kategori : String
+    kategori : String,
+    yorumlar : {type:[mongoose.Schema.Types.ObjectId], ref:'comment' ,autopopulate: true}
 }).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
 
 Place.before('get', find_near);
