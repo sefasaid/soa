@@ -49,7 +49,7 @@ Lokasyon için endpoint /place
 
 Lokasyon bazlı arama yapmak için /place?lat=xxx&lng=xxx
 
-Tek çağırmak için /place/:id?populate=yorumlar -> !! dikkat populate mutlaka olmalı çünkü yorumlarla beraber 
+Tek çağırmak için /place/:id?populate=comments -> !! dikkat populate mutlaka olmalı çünkü yorumlarla beraber 
 alınabilmesi için
 
 Şehre göre arama yapmak için /place?sehir.isim=adana /* sehir.isim dememizin sebebi şehir bir array içindeki isim sekmesinden arama yapıyoruz
