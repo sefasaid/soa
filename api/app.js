@@ -8,7 +8,8 @@ var express = require('express'),
     restful = require('node-restful'),
     mongoose = restful.mongoose;
 var app = express();
-
+var redisClient = require('redis').createClient;
+var redis = redisClient(6379, 'localhost');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
@@ -70,6 +71,7 @@ var Place = app.resource = restful.model('places', mongoose.Schema({
 }).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
 
 Place.before('get', find_near);
+Place.after('get', get_redis);
 
 function find_near(req, res, next) {
     var distance = 1000 / 5371;
@@ -102,7 +104,27 @@ function find_near(req, res, next) {
                 res.json(place);
             }
         })
-    } else{
+    }else if(req.query.length == undefined){
+        redis.get('places', function (err, reply) {
+            if (err) callback(null);
+            else if (reply){
+                console.log("sending from redis");
+                res.json(JSON.parse(reply));
+            } else {
+                next();
+            }
+        })
+    }else{
+        next();
+    }
+}
+function get_redis(req,res,next) {
+    if(req.query.length == undefined){
+        redis.set('places', JSON.stringify(res.locals.bundle), function () {
+            console.log("SAVİNG TO REDİS");
+            next();
+        });
+    }else{
         next();
     }
 
