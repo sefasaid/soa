@@ -16,14 +16,14 @@ function update_place(req, res, next) {
         res.status(400);
         res.json({error:"Lütfen place_id giriniz"});
     }else{
-        var yorum = new Comment();
-        yorum.yorum = req.body.yorum;
-        yorum.kullanici = req.body.user_id;
-        yorum.save(function (err,comment) {
+        var comment = new Comment();
+        comment.comment = req.body.yorum;
+        comment.user = req.body.user_id;
+        comment.save(function (err,comment) {
             if(err)
                 console.log(err);
             Place.findOneAndUpdate(req.body.place_id,
-                {$push: {"yorumlar": yorum._id}},
+                {$push: {"comments": comment._id}},
                 {safe: true, upsert: true},function (err,ok) {
                     if(err)
                         console.log(err);
