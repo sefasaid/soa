@@ -16,17 +16,16 @@ class View_PlaceDetail: UIView {
     //-----
     var tableView = UITableView()
     var collectionView: UICollectionView!
-
+    var btn_GoAndFind = UIButton()
     
     
-     init(frame: CGRect,target:Controller_PlaceDetail) {
+    init(frame: CGRect,target:Controller_PlaceDetail) {
         super.init(frame: frame)
         
         self.target = target
         self.setCreateUI()
         
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -93,11 +92,21 @@ class View_PlaceDetail: UIView {
         tableView.parallaxHeader.height = self.frame.height/2.7;
         tableView.parallaxHeader.mode = MXParallaxHeaderMode.Top
         tableView.parallaxHeader.minimumHeight = 64;
-
-        
-        
-        
+        tableView.contentInset = UIEdgeInsetsMake(CGFloat(self.frame.height/2.7), 0, 128, 0)
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        //-------
+        
+        self.addSubview(btn_GoAndFind)
+        btn_GoAndFind.snp_makeConstraints { (make) in
+            make.width.equalTo(self).multipliedBy(0.5)
+            make.height.equalTo(64)
+            make.centerX.equalTo(self)
+            make.bottom.equalTo(self).offset(-30)
+        }
+        btn_GoAndFind.backgroundColor = UIColor.flatSkyBlueColor()
+        btn_GoAndFind.setTitle("Gitmek Istiyorum", forState: UIControlState.Normal)
+        btn_GoAndFind.layer.cornerRadius = self.frame.width/12
         
     
     }
