@@ -125,6 +125,16 @@ function random_user(req, res, next) {
                 }
             });
         });
+    }else if(req.query.limit && req.query.tag != null){
+        User.find({ "tag.isim" : new RegExp(req.query.tag, "i")})
+            .limit(req.query.limit)
+            .exec(function(err, place) {
+                if (!place) {
+                    res.json({});
+                } else {
+                    res.json(place);
+                }
+            })
     }else{
         next();
     }
