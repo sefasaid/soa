@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 
 class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource {
     
@@ -108,7 +108,8 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
             return cell
         }else if(indexPath.row == 1 && indexPath.section == 0){
             let cell = tableView.dequeueReusableCellWithIdentifier(CELL_PD_TV_INF_2, forIndexPath: indexPath) as! Cell_PD_TV_Inf_2
-            cell.btn_Web
+            cell.btn_Map.addTarget(self, action: "actionForMap:", forControlEvents: UIControlEvents.TouchUpInside)
+            cell.btn_Call.addTarget(self, action: "actionForCall:", forControlEvents: UIControlEvents.TouchUpInside)
             
             
             return cell
@@ -150,13 +151,22 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         return 1
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return self.place.images.count
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CELL_PD_CV_IMAGES, forIndexPath: indexPath) as! Cell_PD_CV_Images
         
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        let cCell = cell as! Cell_PD_CV_Images
+        
+        cCell.img_BackGround.sd_setImageWithURL(NSURL(string: place.images[indexPath.row]), placeholderImage: nil, options: SDWebImageOptions.RetryFailed) { (image, err, cache, url) in
+            
+            
+        }
     }
     
     
@@ -168,8 +178,13 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         
         self.navigationController?.pushViewController(Controller_SendForm(), animated: true)
     }
+    func actionForCall(sender:UIButton){
     
-    
+    }
+    func actionForMap(sender:UIButton){
+        let url = "http://maps.apple.com/maps?saddr=\(place.geo.latitude),\(place.geo.longitude)"
+        UIApplication.sharedApplication().openURL(NSURL(string:url)!)
+    }
     
     //:MARK - Scrollview Delegate
     func scrollViewDidScroll(scrollView: UIScrollView) {

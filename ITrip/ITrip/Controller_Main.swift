@@ -98,7 +98,7 @@ class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let detail = Controller_PlaceDetail()
+        let detail = Controller_PlaceDetail(place: self.arr_Place[indexPath.row])
         self.navigationController?.radialPushViewController(detail, duration: 0.3, startFrame: CGRect(x: self.view.frame.width/2, y: self.view.frame.height, width: 10, height: 10), transitionCompletion: {
             
         })

@@ -13,7 +13,7 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
 
     
     var btn_Call = UIButton()
-    var btn_ = UIButton()
+    var btn_Map = UIButton()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -54,44 +54,31 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
         btn_Call.imageEdgeInsets = UIEdgeInsets(top: 20, left: 80, bottom: 30, right: 75)
         btn_Call.titleEdgeInsets = UIEdgeInsets(top: 25, left: -30, bottom: 0, right: 60)
         btn_Call.titleLabel?.font = UIFont.appBoldFont(14)
-        btn_Call.addTarget(self, action: #selector(Cell_PD_TV_Inf_2.callClicked), forControlEvents: UIControlEvents.TouchUpInside)
         
         
         
         
-        self.addSubview(btn_Web)
-        btn_Web.snp_makeConstraints { (make) in
+        
+        self.addSubview(btn_Map)
+        btn_Map.snp_makeConstraints { (make) in
             make.width.equalTo(self).multipliedBy(0.5)
             make.height.equalTo(self)
             make.right.equalTo(self.snp_right)
         }
-        btn_Web.setTitle("WEB", forState: UIControlState.Normal)
-        btn_Web.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        btn_Web.setImage(UIImage(named: "World"), forState: UIControlState.Normal)
-        btn_Web.titleLabel?.textAlignment = NSTextAlignment.Center
-        btn_Web.imageEdgeInsets = UIEdgeInsets(top: 20, left: 80, bottom: 30, right: 75)
-        btn_Web.titleEdgeInsets = UIEdgeInsets(top: 25, left: -30, bottom: 0, right: 60)
-        btn_Web.titleLabel?.font = UIFont.appBoldFont(14)
-        btn_Web.addTarget(self, action: #selector(Cell_PD_TV_Inf_2.webClicked), forControlEvents: UIControlEvents.TouchUpInside )
+        btn_Map.setTitle("MAP", forState: UIControlState.Normal)
+        btn_Map.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        btn_Map.setImage(UIImage(named: "World"), forState: UIControlState.Normal)
+        btn_Map.titleLabel?.textAlignment = NSTextAlignment.Center
+        btn_Map.imageEdgeInsets = UIEdgeInsets(top: 20, left: 80, bottom: 30, right: 75)
+        btn_Map.titleEdgeInsets = UIEdgeInsets(top: 25, left: -30, bottom: 0, right: 60)
+        btn_Map.titleLabel?.font = UIFont.appBoldFont(14)
+
         
         
         self.contentView.setNeedsLayout()
         self.contentView.layoutIfNeeded()
     }
     
-    func callClicked(){
-        //print("arama")
-        if let url = NSURL(string: "tel://\(905448572632)") where UIApplication.sharedApplication().canOpenURL(url) {
-            UIApplication.sharedApplication().openURL(url)
-        }
-    }
-    
-    func webClicked(){
-        //print("web sitesi")
-        if let url = NSURL(string: "http://www.google.com.tr") {
-            UIApplication.sharedApplication().openURL(url)
-        }
-    }
 
 }
 
