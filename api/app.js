@@ -124,6 +124,7 @@ function get_redis(req,res,next) {
             console.log("SAVİNG TO REDİS");
             next();
         });
+        redis.expire('places', 120);
     }else{
         next();
     }
