@@ -8,8 +8,7 @@ var express = require('express'),
     restful = require('node-restful'),
     mongoose = restful.mongoose;
 var app = express();
-var redisClient = require('redis').createClient;
-var redis = redisClient(6379, 'localhost');
+
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
@@ -18,204 +17,14 @@ app.use(methodOverride());
 
 mongoose.connect("mongodb://localhost:27017/soa");
 
-var City = app.resource = restful.model('cities', mongoose.Schema({
-    il: Number,
-    isim: String
-})).methods(['get', 'post', 'put', 'delete']);
+var City = require('./models/city_model').register(app, '/city');
 
-City.register(app, '/city');
+var Comment = require('./models/comment_model').register(app, '/comment');
 
-var Comment = app.resource = restful.model('comment', mongoose.Schema({
-    yorum: String,
-    kullanici : {type:mongoose.Schema.Types.ObjectId, ref:'user' ,autopopulate: true}
-}).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
+var Place = require('./models/place_model').register(app, '/place');
 
-Comment.before('post', update_place);
+var Tag = require('./models/tag_model').register(app, '/tag');
 
-function update_place(req, res, next) {
-    if(req.body.place_id == null){
-        res.status(400);
-        res.json({error:"Lütfen place_id giriniz"});
-    }else{
-        var yorum = new Comment();
-        yorum.yorum = req.body.yorum;
-        yorum.kullanici = req.body.user_id;
-        yorum.save(function (err,comment) {
-            if(err)
-                console.log(err);
-            Place.findOneAndUpdate(req.body.place_id,
-                {$push: {"yorumlar": yorum._id}},
-                {safe: true, upsert: true},function (err,ok) {
-                    if(err)
-                        console.log(err);
-                    else{
-                        res.status(201);
-                        res.json({status:"ok"});
-                    }
-            })
-        });
+var User = require('./models/user_model').register(app, '/user');
 
-
-    }
-}
-Comment.register(app, '/comment');
-
-
-var Place = app.resource = restful.model('places', mongoose.Schema({
-    sehir : {type:mongoose.Schema.Types.ObjectId, ref:'cities' ,autopopulate: true},
-    isim : String,
-    foto : [],
-    geo: {type: [Number], index: '2d'},
-    kategori : String,
-    yorumlar : [{type:mongoose.Schema.Types.ObjectId, ref:'comment'}]
-}).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
-
-Place.before('get', find_near);
-Place.after('get', get_redis);
-
-function find_near(req, res, next) {
-    var distance = 1000 / 5371;
-    if(req.params.id != null){
-        redis.get(req.params.id, function (err, reply) {
-            if (err) callback(null);
-            else if (reply) {
-                console.log("sending from redis");
-                res.json(JSON.parse(reply));
-            } else {
-                next();
-            }
-        })
-    }else if(req.query.lat && req.query.lng){
-        var query = Place.find({'geo': {
-            $nearSphere: [
-                req.query.lat,
-                req.query.lng
-            ],
-            $maxDistance: distance
-        }});
-
-        query.exec(function (err, place) {
-            if (err) {
-                console.log(err);
-            }
-
-            if (!place) {
-                res.json({});
-            } else {
-                res.json(place);
-            }
-        });
-    }else if(req.query.search){
-        Place.find({isim: new RegExp(req.query.search, "i")})
-            .exec(function(err, place) {
-            if (!place) {
-                res.json({});
-            } else {
-                res.json(place);
-            }
-        })
-    }else if(Object.keys(req.query).length === 0){
-        redis.get('places', function (err, reply) {
-            if (err) callback(null);
-            else if (reply){
-                console.log("sending from redis");
-                res.json(JSON.parse(reply));
-            } else {
-                next();
-            }
-        })
-    }else{
-        next();
-    }
-}
-function get_redis(req,res,next) {
-    if(req.params.id != null){
-        redis.set(req.params.id, JSON.stringify(res.locals.bundle), function () {
-            console.log("SAVİNG TO REDİS");
-            redis.expire(req.params.id, 60);
-
-            next();
-        });
-    }else if(req.query.length == undefined){
-        redis.set('places', JSON.stringify(res.locals.bundle), function () {
-            console.log("SAVİNG TO REDİS");
-            redis.expire('places', 30);
-
-            next();
-        });
-    }else{
-        next();
-    }
-
-}
-Place.register(app, '/place');
-
-var Tag = app.resource = restful.model('tag', mongoose.Schema({
-    isim: String
-})).methods(['get', 'post', 'put', 'delete']);
-
-Tag.register(app, '/tag');
-
-var User = app.resource = restful.model('user', mongoose.Schema({
-    gender: String,
-    name: {
-        title: String,
-        first: String,
-        last: String
-    },
-    location: {
-        street: String,
-        city: String,
-        state: String,
-        postcode: Number
-    },
-    email: String,
-    dob: String,
-    registered: String,
-    phone: String,
-    cell: String,
-    picture: {
-        large: String,
-        medium: String,
-        thumbnail: String
-    },
-    nat: String,
-    tag : {type:[mongoose.Schema.Types.ObjectId], ref:'tag' ,autopopulate: true}
-}).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
-
-User.before('get', random_user);
-function random_user(req, res, next) {
-    if(req.query.rand != null && req.query.limit){
-        var limit = parseInt(req.query.limit)
-        User.count(function(err, count) {
-            if (err) {
-                return callback(err);
-            }
-            var rand = Math.floor(Math.random() * count);
-            console.log(rand);
-            User.find().skip(rand).limit(limit).exec(function (err,users) {
-                if(err)
-                    console.log(err);
-                if (!users) {
-                    res.json({});
-                } else {
-                    res.json(users);
-                }
-            });
-        });
-    }else if(req.query.limit && req.query.tag != null){
-        User.find({ "tag.isim" : new RegExp(req.query.tag, "i")})
-            .limit(req.query.limit)
-            .exec(function(err, place) {
-                if (!place) {
-                    res.json({});
-                } else {
-                    res.json(place);
-                }
-            })
-    }else{
-        next();
-    }
-}
-User.register(app, '/user');
 app.listen(1453);
