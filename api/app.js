@@ -67,7 +67,7 @@ var Place = app.resource = restful.model('places', mongoose.Schema({
     foto : [],
     geo: {type: [Number], index: '2d'},
     kategori : String,
-    yorumlar : {type:[mongoose.Schema.Types.ObjectId], ref:'comment' ,autopopulate: true}
+    yorumlar : {type:[mongoose.Schema.Types.ObjectId], ref:'comment'}
 }).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
 
 Place.before('get', find_near);
