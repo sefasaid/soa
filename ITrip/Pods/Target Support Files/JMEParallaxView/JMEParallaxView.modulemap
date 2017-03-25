@@ -1,0 +1,6 @@
+framework module JMEParallaxView {
+  umbrella header "JMEParallaxView-umbrella.h"
+
+  export *
+  module * { export * }
+}

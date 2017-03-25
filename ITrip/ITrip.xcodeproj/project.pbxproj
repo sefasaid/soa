@@ -7,23 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102F1A9F1E85E07E007143B1 /* JMEParallaxView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102F1A9D1E85E07E007143B1 /* JMEParallaxView.framework */; };
+		102F1AA01E85E07E007143B1 /* KVOController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102F1A9E1E85E07E007143B1 /* KVOController.framework */; };
 		107C50DA1E85C03700FB85C0 /* View_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50D91E85C03700FB85C0 /* View_Main.swift */; };
-
+		107C50DC1E85C52100FB85C0 /* Cell_MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50DB1E85C52100FB85C0 /* Cell_MainList.swift */; };
+		E5F63659CB598FD9FBC2CA69 /* Pods_ITrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1DD4578826C93A9A4902BF /* Pods_ITrip.framework */; };
 		EFB5BEB11E85E36C0055A190 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB5BEAC1E85E36C0055A190 /* Alamofire.framework */; };
 		EFB5BEB21E85E36C0055A190 /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB5BEAD1E85E36C0055A190 /* ChameleonFramework.framework */; };
 		EFB5BEB31E85E36C0055A190 /* FlatColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB5BEAE1E85E36C0055A190 /* FlatColor.framework */; };
 		EFB5BEB41E85E36C0055A190 /* Pods_ITrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB5BEAF1E85E36C0055A190 /* Pods_ITrip.framework */; };
 		EFB5BEB51E85E36C0055A190 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB5BEB01E85E36C0055A190 /* SnapKit.framework */; };
-		EFB5BEB61E85E3AD0055A190 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE546651E85E27B00A7B7B6 /* Alamofire.framework */; };
-		EFB5BEB71E85E3AD0055A190 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFE546651E85E27B00A7B7B6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EFB5BEB81E85E3AD0055A190 /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE546661E85E27B00A7B7B6 /* ChameleonFramework.framework */; };
-		EFB5BEB91E85E3AD0055A190 /* ChameleonFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFE546661E85E27B00A7B7B6 /* ChameleonFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EFB5BEBA1E85E3AD0055A190 /* FlatColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE546671E85E27B00A7B7B6 /* FlatColor.framework */; };
-		EFB5BEBB1E85E3AD0055A190 /* FlatColor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFE546671E85E27B00A7B7B6 /* FlatColor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-
-		107C50DC1E85C52100FB85C0 /* Cell_MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50DB1E85C52100FB85C0 /* Cell_MainList.swift */; };
-		5D89AAA7F7218E11BDB564EA /* Pods_ITrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1DD4578826C93A9A4902BF /* Pods_ITrip.framework */; };
-
 		EFE5461F1E85C54F00A7B7B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5461E1E85C54F00A7B7B6 /* AppDelegate.swift */; };
 		EFE546211E85C54F00A7B7B6 /* Controller_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE546201E85C54F00A7B7B6 /* Controller_Main.swift */; };
 		EFE546261E85C54F00A7B7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE546251E85C54F00A7B7B6 /* Assets.xcassets */; };
@@ -55,23 +48,10 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EFE546641E85E26E00A7B7B6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EFB5BEB91E85E3AD0055A190 /* ChameleonFramework.framework in Embed Frameworks */,
-				EFB5BEB71E85E3AD0055A190 /* Alamofire.framework in Embed Frameworks */,
-				EFB5BEBB1E85E3AD0055A190 /* FlatColor.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		102F1A9D1E85E07E007143B1 /* JMEParallaxView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JMEParallaxView.framework; path = "Pods/../build/Debug-iphoneos/JMEParallaxView/JMEParallaxView.framework"; sourceTree = "<group>"; };
+		102F1A9E1E85E07E007143B1 /* KVOController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KVOController.framework; path = "Pods/../build/Debug-iphoneos/KVOController/KVOController.framework"; sourceTree = "<group>"; };
+		102F1AA11E85E2B1007143B1 /* ITrip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ITrip-Bridging-Header.h"; sourceTree = "<group>"; };
 		107C50D91E85C03700FB85C0 /* View_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View_Main.swift; sourceTree = "<group>"; };
 		107C50DB1E85C52100FB85C0 /* Cell_MainList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_MainList.swift; sourceTree = "<group>"; };
 		45983E46D2369B5BE1640872 /* Pods-ITrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITrip/Pods-ITrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,14 +91,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFB5BEB81E85E3AD0055A190 /* ChameleonFramework.framework in Frameworks */,
+				102F1A9F1E85E07E007143B1 /* JMEParallaxView.framework in Frameworks */,
+				102F1AA01E85E07E007143B1 /* KVOController.framework in Frameworks */,
 				EFB5BEB11E85E36C0055A190 /* Alamofire.framework in Frameworks */,
-				EFB5BEB61E85E3AD0055A190 /* Alamofire.framework in Frameworks */,
 				EFB5BEB21E85E36C0055A190 /* ChameleonFramework.framework in Frameworks */,
 				EFB5BEB31E85E36C0055A190 /* FlatColor.framework in Frameworks */,
-				EFB5BEBA1E85E3AD0055A190 /* FlatColor.framework in Frameworks */,
 				EFB5BEB41E85E36C0055A190 /* Pods_ITrip.framework in Frameworks */,
 				EFB5BEB51E85E36C0055A190 /* SnapKit.framework in Frameworks */,
+				E5F63659CB598FD9FBC2CA69 /* Pods_ITrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +132,8 @@
 		A0E84467AE4D7428B4DCB800 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				102F1A9D1E85E07E007143B1 /* JMEParallaxView.framework */,
+				102F1A9E1E85E07E007143B1 /* KVOController.framework */,
 				EFB5BEAC1E85E36C0055A190 /* Alamofire.framework */,
 				EFB5BEAD1E85E36C0055A190 /* ChameleonFramework.framework */,
 				EFB5BEAE1E85E36C0055A190 /* FlatColor.framework */,
@@ -207,6 +189,7 @@
 				EFE546251E85C54F00A7B7B6 /* Assets.xcassets */,
 				EFE546271E85C54F00A7B7B6 /* LaunchScreen.storyboard */,
 				EFE5462A1E85C54F00A7B7B6 /* Info.plist */,
+				102F1AA11E85E2B1007143B1 /* ITrip-Bridging-Header.h */,
 			);
 			path = ITrip;
 			sourceTree = "<group>";
@@ -270,7 +253,6 @@
 				EFE546191E85C54F00A7B7B6 /* Resources */,
 				FC9D522125EA9BF21DCB088A /* [CP] Embed Pods Frameworks */,
 				ED5E6F2DD2841FDC21B48092 /* [CP] Copy Pods Resources */,
-				EFE546641E85E26E00A7B7B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		ED5E6F2DD2841FDC21B48092 /* [CP] Copy Pods Resources */ = {
@@ -583,6 +565,7 @@
 			baseConfigurationReference = 45983E46D2369B5BE1640872 /* Pods-ITrip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
@@ -590,11 +573,15 @@
 					"$(PROJECT_DIR)/build/Release-iphoneos/FlatColor",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
 					"$(PROJECT_DIR)/build/Release-iphoneos/SnapKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/JMEParallaxView",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/KVOController",
 				);
 				INFOPLIST_FILE = ITrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooe.ITrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ITrip/ITrip-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -603,6 +590,7 @@
 			baseConfigurationReference = 59CB7AC3A303AE21EADD0152 /* Pods-ITrip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
@@ -610,11 +598,14 @@
 					"$(PROJECT_DIR)/build/Release-iphoneos/FlatColor",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
 					"$(PROJECT_DIR)/build/Release-iphoneos/SnapKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/JMEParallaxView",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/KVOController",
 				);
 				INFOPLIST_FILE = ITrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooe.ITrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ITrip/ITrip-Bridging-Header.h";
 			};
 			name = Release;
 		};

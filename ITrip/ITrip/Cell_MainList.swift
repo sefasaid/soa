@@ -14,12 +14,14 @@ class Cell_MainList: UITableViewCell {
     
     var img_Place = UIImageView()
     var PlaceName = UILabel()
+    var view_Bottom = UIView()
     
 
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        self.selectionStyle = UITableViewCellSelectionStyle.None
         setCreateUI()
     }
     
@@ -35,18 +37,36 @@ class Cell_MainList: UITableViewCell {
             make.height.equalTo(self)
             make.center.equalTo(self)
         }
-        img_Place.backgroundColor = UIColor.grayColor()
+        img_Place.backgroundColor = UIColor.hexColor(0xFFFFFF)
+        
+        
+        
+        
+        self.addSubview(view_Bottom)
+        view_Bottom.snp_makeConstraints { (make) in
+            make.width.equalTo(self)
+            make.height.equalTo(self)
+            make.bottom.equalTo(self)
+        }
+        view_Bottom.backgroundColor = UIColor.hexColor(0x000000, alpha: 0.4)
+        
         
         self.addSubview(PlaceName)
         PlaceName.snp_makeConstraints { (make) in
-            make.width.equalTo(self)
-            make.height.equalTo(self).multipliedBy(0.3)
-            make.center.equalTo(self)
+            make.top.equalTo(self)
+            make.bottom.equalTo(self)
+            make.right.equalTo(self)
+            make.left.equalTo(self)
         }
-        PlaceName.text = "Film Adı"
-        PlaceName.textColor = UIColor.blackColor()
+        PlaceName.text = "Aya Sofya Camisi"
+        PlaceName.textColor = UIColor.flatWhiteColor()
+        PlaceName.font = UIFont.appBoldFont(22)
         PlaceName.textAlignment = NSTextAlignment.Center
         
+        
+        
+        
+        self.backgroundColor = UIColor.whiteColor()
         
         self.contentView.setNeedsLayout()
         self.contentView.setNeedsDisplay()

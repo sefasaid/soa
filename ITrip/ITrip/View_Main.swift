@@ -24,9 +24,11 @@ class View_Main: UIView {
         self.backgroundColor = UIColor.whiteColor()
         table.frame = self.frame
         table.registerClass(Cell_MainList.self, forCellReuseIdentifier: "Cell_Main_One")
-        table.rowHeight = self.frame.height/5
+        table.rowHeight = self.frame.height/2.3
         table.delegate = target
         table.dataSource = target
+        table.backgroundColor = UIColor.whiteColor()
+        table.separatorStyle = UITableViewCellSeparatorStyle.None
         
         
         
