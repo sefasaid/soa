@@ -11,18 +11,10 @@ pod 'FlatColor'
 pod 'ChameleonFramework/Swift'
 pod 'JMEParallaxView'
 pod 'MXParallaxHeader'
-<<<<<<< HEAD
 pod 'ASJTagsView'
 pod 'IQKeyboardManager'
 
 
 
-
-=======
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
->>>>>>> origin/IOS
 end
 #sudo gem install cocoapods -v 1.0.0
