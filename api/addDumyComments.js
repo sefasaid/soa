@@ -61,14 +61,10 @@ Place.find({}, function (err, places) {
             users.forEach(function (user) {
                 var rand = Math.floor(Math.random() * 14);
                 var comment = dumyComments[rand];
-
-
                 requestify.post(reqUrl, {'user_id': user._id, 'yorum': comment, 'place_id': place._id})
                     .then(function (response) {
-
-                        response.getBody();
+                        console.log(response.getBody());
                     });
-
             })
         })
     })
