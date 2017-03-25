@@ -4,7 +4,7 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
 var Tag = restful.model('tag', mongoose.Schema({
-    isim: String
+    name: String
 })).methods(['get', 'post', 'put', 'delete']);
 
 module.exports = Tag;

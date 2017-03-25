@@ -5,8 +5,8 @@ var restful = require('node-restful');
 var mongoose = restful.mongoose;
 
 var Comment = restful.model('comment', mongoose.Schema({
-    yorum: String,
-    kullanici : {type:mongoose.Schema.Types.ObjectId, ref:'user' ,autopopulate: true}
+    comment: String,
+    user : {type:mongoose.Schema.Types.ObjectId, ref:'user' ,autopopulate: true}
 }).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
 
 Comment.before('post', update_place);

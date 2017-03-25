@@ -7,12 +7,12 @@ var redisClient = require('redis').createClient;
 var redis = redisClient(6379, 'localhost');
 
 var Place = restful.model('places', mongoose.Schema({
-    sehir : {type:mongoose.Schema.Types.ObjectId, ref:'cities' ,autopopulate: true},
-    isim : String,
-    foto : [],
+    city : {type:mongoose.Schema.Types.ObjectId, ref:'cities' ,autopopulate: true},
+    name : String,
+    pictures : [],
     geo: {type: [Number], index: '2d'},
-    kategori : String,
-    yorumlar : [{type:mongoose.Schema.Types.ObjectId, ref:'comment'}]
+    category : String,
+    comments : [{type:mongoose.Schema.Types.ObjectId, ref:'comment'}]
 }).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
 
 Place.before('get', find_near);
@@ -51,7 +51,7 @@ function find_near(req, res, next) {
             }
         });
     }else if(req.query.search){
-        Place.find({isim: new RegExp(req.query.search, "i")})
+        Place.find({name: new RegExp(req.query.search, "i")})
             .exec(function(err, place) {
                 if (!place) {
                     res.json({});

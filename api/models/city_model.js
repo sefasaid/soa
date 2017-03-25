@@ -5,8 +5,8 @@ var restful = require('node-restful');
 var mongoose = restful.mongoose;
 
 var City = restful.model('cities', mongoose.Schema({
-    il: Number,
-    isim: String
+    city_id: Number,
+    name: String
 })).methods(['get', 'post', 'put', 'delete']);
 
 
