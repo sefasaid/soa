@@ -2,7 +2,7 @@
  * Created by sefasaid on 25/03/2017.
  */
 var requestify = require('requestify');
-var reqUrl = "http://localhost:1453/comment";
+var reqUrl = "http://159.203.131.130:1453/comment";
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost:27017/soa');
