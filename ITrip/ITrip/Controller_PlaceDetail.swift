@@ -56,7 +56,7 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         
         
         self.c_View?.lbl_Title.text = self.place.name
-
+        self.getData()
         
     }
     
@@ -83,6 +83,31 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     
+    
+    
+    func getData(){
+    
+    RequestConnection.sharedInstance(self).connectionGET("/place/\(self.place.id)", parameter: "?populate=comments", complateBlock: { (json) in
+        
+        print(json)
+            ApiParse.parseComment(self, json: json, complate: { (comment) in
+                
+                self.place.comments.append(comment)
+                
+                }, error: { (message) in
+                    
+                }, end: { 
+                    self.c_View?.tableView.reloadData()
+                    print("datalar reload oldu",self.place.comments.count)
+            })
+        
+        
+        }) { (error) in
+            
+        }
+    
+    }
+    
     //:MARK - TableView DataSource & Delegate
     
     
@@ -94,7 +119,7 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         if(section == 0){
             return 2
         }else{
-            return 8
+            return self.place.comments.count
         }
         
     }
@@ -116,7 +141,14 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         }else if(indexPath.section == 1){
         
             let cell = tableView.dequeueReusableCellWithIdentifier(CELL_PD_TV_REVIEW, forIndexPath: indexPath) as! Cell_PD_TV_Review
-            cell.lbl_Review.text = self.s_Arr[indexPath.row]
+            cell.lbl_Review.text = self.place.comments[indexPath.row].message
+            cell.lbl_Name.text = self.place.comments[indexPath.row].user.name
+            cell.lbl_Date.text = self.place.comments[indexPath.row].user.register
+            cell.img_User.sd_setImageWithURL(NSURL(string: place.comments[indexPath.row].user.picture), placeholderImage: nil, options: SDWebImageOptions.RetryFailed) { (image, err, cache, url) in
+                
+                
+            }
+
             return cell
 
         }else{
@@ -130,7 +162,7 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         if(indexPath.section == 1){
             
             
-            let height = heightToText(self.s_Arr[indexPath.row], font: UIFont.appFont(12), width: self.view.frame.width - 75)
+            let height = heightToText(self.place.comments[indexPath.row].message, font: UIFont.appFont(12), width: self.view.frame.width - 75)
             let total = 88 + height
             
             return total
@@ -168,8 +200,6 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
             
         }
     }
-    
-    
     
     //:MARK - Action For Buttons
     
