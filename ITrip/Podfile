@@ -13,7 +13,10 @@ pod 'JMEParallaxView'
 pod 'MXParallaxHeader'
 pod 'ASJTagsView'
 pod 'IQKeyboardManager'
-
+pod 'ActionSheetPicker-3.0'
+pod 'SwiftyJSON', '2.4.0'
+pod 'ReachabilitySwift', '~> 2.4'
+pod 'CWStatusBarNotification'
 
 
 end

@@ -17,11 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        
+        configurationApi.domain = "http://159.203.131.130"
+        configurationApi.port = ":1453"
+        configurationApi.version = ""
       
         let backImg: UIImage = UIImage(named: "back_button")!
         UIBarButtonItem.appearance().setBackButtonBackgroundImage(backImg, forState: .Normal, barMetrics: .Default)
         
 
+        
         
         
         

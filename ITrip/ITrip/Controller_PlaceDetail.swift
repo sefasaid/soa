@@ -158,5 +158,41 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     
+    //:MARK - Scrollview Delegate
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        print(scrollView.tag)
+        var offset           = scrollView.contentOffset.y
+        var headerTransform  = CATransform3DIdentity
+        var headerTransform2 = CATransform3DIdentity
+        
+        if (offset < -183 && scrollView.tag == 1) {
+            
+
+            
+
+        }
+        else if(scrollView.tag == 1) {
+            
+            // Header -----------
+            
+            headerTransform = CATransform3DTranslate(headerTransform, 0, max(0, -offset - 78), 0)
+            
+            c_View?.lbl_Title.layer.transform = headerTransform
+            print("offset---------",offset)
+            let mina = min (1.0, (offset + 150)/100)
+            print("min------------" ,mina )
+            self.c_View?.top_View.alpha = mina
+            self.c_View?.lbl_Title.layer.zPosition = 0
+            self.c_View?.tableView.layer.zPosition = 0
+
+            
+        }
+        
+
+    }
+
+    
+    
     
 }
