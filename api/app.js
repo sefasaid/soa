@@ -67,7 +67,7 @@ var Place = app.resource = restful.model('places', mongoose.Schema({
     foto : [],
     geo: {type: [Number], index: '2d'},
     kategori : String,
-    yorumlar : {type:[mongoose.Schema.Types.ObjectId], ref:'comment'}
+    yorumlar : [{type:mongoose.Schema.Types.ObjectId, ref:'comment'}]
 }).plugin(require('mongoose-autopopulate'))).methods(['get', 'post', 'put', 'delete']);
 
 Place.before('get', find_near);
@@ -75,7 +75,6 @@ Place.after('get', get_redis);
 
 function find_near(req, res, next) {
     var distance = 1000 / 5371;
-
     if(req.query.lat && req.query.lng){
         var query = Place.find({'geo': {
             $nearSphere: [
