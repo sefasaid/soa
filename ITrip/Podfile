@@ -11,5 +11,9 @@ pod 'FlatColor'
 pod 'ChameleonFramework/Swift'
 pod 'JMEParallaxView'
 pod 'MXParallaxHeader'
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 end
 #sudo gem install cocoapods -v 1.0.0
