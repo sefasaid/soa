@@ -1,0 +1,6 @@
+framework module ASJTagsView {
+  umbrella header "ASJTagsView-umbrella.h"
+
+  export *
+  module * { export * }
+}
