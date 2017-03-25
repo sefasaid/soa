@@ -17,6 +17,8 @@ class View_PlaceDetail: UIView {
     var tableView = UITableView()
     var collectionView: UICollectionView!
     var btn_GoAndFind = UIButton()
+    var top_View = UIView()
+    var lbl_Title = UILabel()
     
     
     init(frame: CGRect,target:Controller_PlaceDetail) {
@@ -36,7 +38,6 @@ class View_PlaceDetail: UIView {
         
         
         self.backgroundColor = UIColor.whiteColor()
-        
         
         
         
@@ -67,6 +68,7 @@ class View_PlaceDetail: UIView {
         collectionView.translatesAutoresizingMaskIntoConstraints = true
         collectionView.autoresizingMask = [UIViewAutoresizing.FlexibleHeight,UIViewAutoresizing.FlexibleWidth]
         collectionView.backgroundColor = UIColor.hexColor(0xF9F9F9)
+        collectionView.tag = 2
         // view_Header.addSubview(collectionView)
         
 
@@ -94,7 +96,7 @@ class View_PlaceDetail: UIView {
         tableView.parallaxHeader.minimumHeight = 64;
         tableView.contentInset = UIEdgeInsetsMake(CGFloat(self.frame.height/2.7), 0, 128, 0)
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        
+        tableView.tag = 1
         //-------
         
         self.addSubview(btn_GoAndFind)
@@ -108,6 +110,37 @@ class View_PlaceDetail: UIView {
         btn_GoAndFind.setTitle("Gitmek Istiyorum", forState: UIControlState.Normal)
         btn_GoAndFind.layer.cornerRadius = self.frame.width/12
         btn_GoAndFind.addTarget(self.target, action: "actionForGoAndFind:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        
+        
+        
+        self.addSubview(top_View)
+        top_View.snp_makeConstraints { (make) in
+            make.width.equalTo(self)
+            make.height.equalTo(64)
+            make.top.equalTo(self)
+        }
+        top_View.backgroundColor = UIColor.hexColor(0xFFFFFF, alpha: 1)
+        top_View.layer.shadowColor = UIColor.blackColor().CGColor
+        top_View.layer.shadowOpacity = 1
+        top_View.layer.shadowOffset = CGSize.zero
+        top_View.layer.shadowRadius = 10
+        top_View.alpha = 0
+        
+        
+        self.top_View.addSubview(lbl_Title)
+        lbl_Title.snp_makeConstraints { (make) in
+            make.width.equalTo(self).offset(100)
+            make.height.equalTo(64)
+            make.top.equalTo(top_View).offset(7.5)
+            make.left.equalTo(top_View).offset(85)
+        }
+        lbl_Title.textColor = UIColor.blackColor()
+        lbl_Title.text = "Aya Sofya Camisi"
+        lbl_Title.font = UIFont.appBoldFont(25)
+        
+        
     
     }
     

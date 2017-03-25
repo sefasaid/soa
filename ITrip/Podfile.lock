@@ -4,35 +4,44 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - CWStatusBarNotification (2.3.5)
   - FlatColor (1.1)
   - IQKeyboardManager (4.0.8)
   - JMEParallaxView (1.0.5):
     - KVOController (~> 1.0.1)
   - KVOController (1.0.3)
   - MXParallaxHeader (0.6.0)
+  - ReachabilitySwift (2.4)
   - SnapKit (0.21.1)
+  - SwiftyJSON (2.4.0)
 
 DEPENDENCIES:
   - Alamofire (= 3.4.1)
   - ASJTagsView
   - ChameleonFramework/Swift
+  - CWStatusBarNotification
   - FlatColor
   - IQKeyboardManager
   - JMEParallaxView
   - MXParallaxHeader
+  - ReachabilitySwift (~> 2.4)
   - SnapKit (= 0.21.1)
+  - SwiftyJSON (= 2.4.0)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ASJTagsView: fc7526f5d76fd2a07a011b232a03a6d2b0a9dad1
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CWStatusBarNotification: 3d2738b25c3207f60cc50201388d3c96182545ff
   FlatColor: a9cc6991f1c75a940df70109bdc34c5db341b8ee
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   JMEParallaxView: 8e997eba10abe283f6c1cb27d4058430cdb307c0
   KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
   MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
+  ReachabilitySwift: dc7452dab85ff881904215e1a113326ad8d07beb
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
 
-PODFILE CHECKSUM: 25421376cbf09b6c294abaa82c90b379d031dbde
+PODFILE CHECKSUM: ce1b2dfe893faa47022b14ab10c76e2555aed103
 
 COCOAPODS: 1.0.1

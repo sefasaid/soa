@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CWStatusBarNotification.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -49,7 +54,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReachabilitySwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,22 +72,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>15DB7B7B3ABF687988F19317177068F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7BBC6DF901F67FBEAE6BD8B260B03640</key>
+		<key>76F8FC446EA7E8010284E03918E30E93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8C6AA07AADF776F6BC6520CB8CBC8E28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,6 +107,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C87BEEC2837BE6C3A395AD4D63606012</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1210E7D30D4980606E07587347DC4E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E75E5BAC0FE6E4C6A5E5F95EA6807F8A</key>
 		<dict>
 			<key>primary</key>
@@ -103,6 +128,11 @@
 			<true/>
 		</dict>
 		<key>F90086F8476AC825F7B1388C8DF8D9B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBB40DC68BFEC4E8897FD3DF3B349908</key>
 		<dict>
 			<key>primary</key>
 			<true/>

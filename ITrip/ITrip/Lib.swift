@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CWStatusBarNotification
 
 
 func heightToText(text:String, font:UIFont, width:CGFloat) -> CGFloat{
@@ -32,6 +32,9 @@ func widthForView(text:String, font:UIFont) -> CGFloat{
     label.sizeToFit()
     return label.frame.width
 }
+func localized(string:String) -> String {
+    return NSLocalizedString(string,comment:"")
+}
 
 
 
@@ -46,6 +49,20 @@ extension UIViewController{
         
         
     }
+    
+    func notificationNavigationBar(txt:String,backColor:UIColor){
+        
+        let notif = CWStatusBarNotification()
+        notif.notificationStyle = CWNotificationStyle.NavigationBarNotification
+        notif.notificationLabelBackgroundColor = backColor
+        notif.notificationLabelTextColor = UIColor.whiteColor()
+        notif.notificationAnimationOutStyle = CWNotificationAnimationStyle.Top
+        notif.displayNotificationWithMessage(txt, forDuration: 2.5)
+        notif.notificationTappedBlock = {
+            notif.dismissNotification()
+        }
+    }
+
     
 }
 

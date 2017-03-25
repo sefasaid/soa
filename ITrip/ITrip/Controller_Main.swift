@@ -17,13 +17,14 @@ class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSourc
         MainlistView.setup(self)
         
         self.title = "ITrip"
-        // UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
-        
-       /* let BackImage = UIImage(named: "back_button")
-        self.navigationController?.navigationBar.backIndicatorImage = BackImage
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = BackImage
-        self.navigationController?.navigationBar.backItem?.title = "Back"*/
+        RequestConnection.sharedInstance(self).connectionGET("/place", parameter: "", complateBlock: { (json) in
+            
+            print(json)
+            
+            }) { (error) in
+                
+        }
         
         
         self.view.addSubview(MainlistView)
@@ -34,8 +35,6 @@ class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSourc
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationBackGroundColor(UIColor.hexColor(0xFAFAFA, alpha: 1.0), tintC: UIColor.flatBlackColor())
@@ -45,8 +44,6 @@ class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSourc
     override func viewDidAppear(animated: Bool) {
         self.navigationController!.navigationBar.topItem!.title = "ITrıp";
     }
-    
-    
     
     // TableView Delegate & DataSource
     func numberOfSections(in tableView: UITableView) -> Int {
