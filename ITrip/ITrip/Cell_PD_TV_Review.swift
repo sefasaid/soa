@@ -44,6 +44,7 @@ class Cell_PD_TV_Review: UITableViewCell {
         }
         img_User.backgroundColor = UIColor.grayColor()
         img_User.layer.cornerRadius = 25
+        img_User.layer.masksToBounds = true
         
         
         self.addSubview(lbl_Name)

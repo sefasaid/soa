@@ -17,9 +17,8 @@ class Place {
     var geo         = GeoPoint()
     var category    = String()
     var images      = [String]()
+    var comments    = [Comment]()
 }
-
-
 class GeoPoint {
     
     var latitude    = String()
@@ -31,4 +30,16 @@ class City {
     var id      = String()
     var code    = String()
     var name    = String()
+}
+class Comment{
+    var id          = String()
+    var user        = User()
+    var message     = String()
+}
+class User{
+
+    var id          = String()
+    var register    = String()
+    var name        = String()
+    var picture     = String()
 }
