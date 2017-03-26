@@ -41,12 +41,6 @@ class LayerAnimator : NSObject{
 }
 
 
-
-
-
-
-
-
 extension  UIView {
 
 
