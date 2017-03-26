@@ -45,6 +45,18 @@ class Controller_SendForm: UIViewController,TagDelegate {
         
     }
     
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = nil
+        self.navigationController!.navigationBar.translucent = false
+        self.navigationBackGroundColor(UIColor.flatSkyBlueColor(), tintC: UIColor.whiteColor())
+
+    }
+    override func viewWillDisappear(animated: Bool) {
+        
+    }
     // Tag Delegate
     func returnSelectedTag(tag: [String]) {
         

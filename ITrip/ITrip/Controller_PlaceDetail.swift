@@ -229,6 +229,15 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         
         if (offset < -183 && scrollView.tag == 1) {
             
+            headerTransform = CATransform3DTranslate(headerTransform, 1, max(0, offset - 78), 0)
+            
+            c_View?.lbl_Title.layer.transform = headerTransform
+            print("offset---------------------------",offset)
+            let mina = min (1.0, (offset + 150)/100)
+            print("min------------------------------" ,mina )
+            self.c_View?.top_View.alpha = mina
+            self.c_View?.lbl_Title.layer.zPosition = 0
+            self.c_View?.tableView.layer.zPosition = 0
 
             
 
