@@ -10,16 +10,12 @@ import UIKit
 import FlatColor
 import ChameleonFramework
 
-
-
-
 class Cell_PD_TV_Inf: UITableViewCell {
     
     var lbl_Title = UILabel()
     var lbl_Trips = UILabel()
     var lbl_Trips_Count = UILabel()
     var img_Stars = UIImageView()
-    
     
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {

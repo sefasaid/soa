@@ -19,6 +19,20 @@ class Controller_SendForm: UIViewController,TagDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        let btnName = UIButton()
+        btnName.setImage(UIImage(named: "left"), forState: .Normal)
+        btnName.frame = CGRectMake(0, 0, 30, 30)
+        btnName.addTarget(self, action: "actionForLeft:", forControlEvents: .TouchUpInside)
+        
+        //.... Set Right/Left Bar Button item
+        let rightBarButton = UIBarButtonItem()
+        rightBarButton.customView = btnName
+        self.navigationItem.leftBarButtonItem = rightBarButton
+
+        
+        
         self.navigationBackGroundColor(UIColor.flatSkyBlueColor(), tintC: UIColor.whiteColor())
         self.c_View = View_SendForm(frame: self.view.frame, target: self)
         self.view.addSubview(self.c_View!)
@@ -31,12 +45,13 @@ class Controller_SendForm: UIViewController,TagDelegate {
         
     }
     
+    // Tag Delegate
     func returnSelectedTag(tag: [String]) {
         
         print(tag)
     }
     
-    
+    //MARK: - Action for Date
     func actionForDate(sender:UIButton){
         
         ActionSheetDatePicker.showPickerWithTitle("Tarih Seçiniz.", datePickerMode: UIDatePickerMode.DateAndTime, selectedDate: NSDate(), doneBlock: { (picker, obj, obj2) in
@@ -56,6 +71,12 @@ class Controller_SendForm: UIViewController,TagDelegate {
             }, origin: sender)
     }
     
+    func actionForLeft(sender:UIButton){
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
+
   
 }
 

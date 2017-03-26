@@ -13,13 +13,11 @@ import MXParallaxHeader
 class View_PlaceDetail: UIView {
     
     var target : Controller_PlaceDetail?
-    //-----
     var tableView = UITableView()
     var collectionView: UICollectionView!
     var btn_GoAndFind = UIButton()
     var top_View = UIView()
     var lbl_Title = UILabel()
-    
     
     init(frame: CGRect,target:Controller_PlaceDetail) {
         super.init(frame: frame)
@@ -28,12 +26,12 @@ class View_PlaceDetail: UIView {
         self.setCreateUI()
         
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    //:MARK - ekrana cizilecek objectlerim
+    //:MARK - Create Object
     func setCreateUI(){
         
         

@@ -18,7 +18,6 @@ class Cell_PD_TV_Review: UITableViewCell {
     var img_User = UIImageView()
     var lbl_Review = UILabel()
     
-    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
      
@@ -30,7 +29,6 @@ class Cell_PD_TV_Review: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     func setCreateUI(){
     

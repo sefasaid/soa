@@ -10,13 +10,11 @@ import UIKit
 import SnapKit
 
 
-class Cell_MainList: UITableViewCell {
+class Cell_ML_TV_One: UITableViewCell {
     
     var img_Place = UIImageView()
-    var PlaceName = UILabel()
+    var lbl_Name = UILabel()
     var view_Bottom = UIView()
-    
-
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -51,16 +49,16 @@ class Cell_MainList: UITableViewCell {
         view_Bottom.backgroundColor = UIColor.hexColor(0x000000, alpha: 0.4)
         
         
-        self.addSubview(PlaceName)
-        PlaceName.snp_makeConstraints { (make) in
+        self.addSubview(lbl_Name)
+        lbl_Name.snp_makeConstraints { (make) in
             make.top.equalTo(self)
             make.bottom.equalTo(self)
             make.right.equalTo(self)
             make.left.equalTo(self)
         }
-        PlaceName.textColor = UIColor.flatWhiteColor()
-        PlaceName.font = UIFont.appBoldFont(22)
-        PlaceName.textAlignment = NSTextAlignment.Center
+        lbl_Name.textColor = UIColor.flatWhiteColor()
+        lbl_Name.font = UIFont.appBoldFont(22)
+        lbl_Name.textAlignment = NSTextAlignment.Center
         
         
         

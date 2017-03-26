@@ -11,7 +11,6 @@ import UIKit
 
 class Cell_PD_TV_Inf_2 :UITableViewCell{
 
-    
     var btn_Call = UIButton()
     var btn_Map = UIButton()
     
@@ -25,7 +24,6 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     func setCreateUI(){
     
@@ -78,8 +76,6 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
         self.contentView.setNeedsLayout()
         self.contentView.layoutIfNeeded()
     }
-    
-
 }
 
 

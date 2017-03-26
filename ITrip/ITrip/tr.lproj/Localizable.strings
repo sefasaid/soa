@@ -6,4 +6,5 @@
   Copyright © 2017 Özgün. All rights reserved.
 */
 
-"btn" = "tr";
+"btn" = "Gezmek Istiyorum";
+"NO_NET"    = "Bağlantınız Bulunamamaktadır";
