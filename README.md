@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SOA - ITrip IOS
 
 ![N|Solid](https://www.tripdatabase.com/static/img/trip-logo.png)
