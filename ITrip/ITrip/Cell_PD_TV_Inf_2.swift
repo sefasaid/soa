@@ -45,7 +45,7 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
             make.height.equalTo(self)
             make.left.equalTo(self.snp_left)
         }
-        btn_Call.setTitle("ARA", forState: UIControlState.Normal)
+        btn_Call.setTitle(localized("btn_Call"), forState: UIControlState.Normal)
         btn_Call.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         btn_Call.setImage(UIImage(named: "Phone"), forState: UIControlState.Normal)
         // btn_Call.titleLabel?.textAlignment = NSTextAlignment.Center
@@ -63,7 +63,7 @@ class Cell_PD_TV_Inf_2 :UITableViewCell{
             make.height.equalTo(self)
             make.right.equalTo(self.snp_right)
         }
-        btn_Map.setTitle("MAP", forState: UIControlState.Normal)
+        btn_Map.setTitle(localized("btn_Map"), forState: UIControlState.Normal)
         btn_Map.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         btn_Map.setImage(UIImage(named: "World"), forState: UIControlState.Normal)
         btn_Map.titleLabel?.textAlignment = NSTextAlignment.Center

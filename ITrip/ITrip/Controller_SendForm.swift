@@ -54,7 +54,7 @@ class Controller_SendForm: UIViewController,TagDelegate {
     //MARK: - Action for Date
     func actionForDate(sender:UIButton){
         
-        ActionSheetDatePicker.showPickerWithTitle("Tarih Seçiniz.", datePickerMode: UIDatePickerMode.DateAndTime, selectedDate: NSDate(), doneBlock: { (picker, obj, obj2) in
+        ActionSheetDatePicker.showPickerWithTitle(localized("btn_data"), datePickerMode: UIDatePickerMode.DateAndTime, selectedDate: NSDate(), doneBlock: { (picker, obj, obj2) in
             
             
             

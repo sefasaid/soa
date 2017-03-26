@@ -5,5 +5,9 @@
   Created by Özgün on 26.03.2017.
   Copyright © 2017 Özgün. All rights reserved.
 */
-"btn"       = "I Want Travel";
-"NO_NET"    = "No Connection";
+"btn"           = "Join It";
+"NO_NET"        = "No Connection";
+"btn_Call"      = "CALL";
+"btn_Map"       = "MAP";
+"btn_data"      = "Select Data";
+"btn_complete"  = "Complate";
