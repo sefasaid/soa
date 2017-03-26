@@ -32,7 +32,7 @@ PUT /endpoint/:id
 
 DELETE /endpoint/:id
 
-  şeklinde restfull şeklinde çalışıyor
+  şeklinde restfull olarak çalışıyor
 
 Bütün apilerde limit,sort,skip var 
 
