@@ -24,6 +24,9 @@
 		EFAA719E1E86DC4B000807FA /* AAPTransactionDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA719B1E86DC4B000807FA /* AAPTransactionDirector.swift */; };
 		EFAA719F1E86DC4B000807FA /* UINavigationController+RadialTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA719C1E86DC4B000807FA /* UINavigationController+RadialTransaction.swift */; };
 		EFAA71A01E86DC4B000807FA /* UIView+Radial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA719D1E86DC4B000807FA /* UIView+Radial.swift */; };
+		EFAFD46F1E87CEA10077514A /* Controller_FindParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFD46E1E87CEA10077514A /* Controller_FindParticipant.swift */; };
+		EFAFD4711E87CEB00077514A /* View_FindParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFD4701E87CEB00077514A /* View_FindParticipant.swift */; };
+		EFAFD4741E87D0A30077514A /* Cell_FindParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFD4731E87D0A30077514A /* Cell_FindParticipant.swift */; };
 		EFD423CC1E8725C80016EA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD423CB1E8725C80016EA45 /* LaunchScreen.storyboard */; };
 		EFDDEB0E1E85ED6100097BA4 /* Cell_PD_TV_Inf_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDEB0D1E85ED6100097BA4 /* Cell_PD_TV_Inf_2.swift */; };
 		EFDDEB101E85FCE800097BA4 /* Lib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDEB0F1E85FCE800097BA4 /* Lib.swift */; };
@@ -82,6 +85,9 @@
 		EFAA719B1E86DC4B000807FA /* AAPTransactionDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPTransactionDirector.swift; sourceTree = "<group>"; };
 		EFAA719C1E86DC4B000807FA /* UINavigationController+RadialTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+RadialTransaction.swift"; sourceTree = "<group>"; };
 		EFAA719D1E86DC4B000807FA /* UIView+Radial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Radial.swift"; sourceTree = "<group>"; };
+		EFAFD46E1E87CEA10077514A /* Controller_FindParticipant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller_FindParticipant.swift; sourceTree = "<group>"; };
+		EFAFD4701E87CEB00077514A /* View_FindParticipant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View_FindParticipant.swift; sourceTree = "<group>"; };
+		EFAFD4731E87D0A30077514A /* Cell_FindParticipant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_FindParticipant.swift; sourceTree = "<group>"; };
 		EFD423CB1E8725C80016EA45 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFDDEB0D1E85ED6100097BA4 /* Cell_PD_TV_Inf_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_PD_TV_Inf_2.swift; sourceTree = "<group>"; };
 		EFDDEB0F1E85FCE800097BA4 /* Lib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lib.swift; sourceTree = "<group>"; };
@@ -244,12 +250,31 @@
 		EFAA71A11E86DC8B000807FA /* Screens-Controller-View-Cell */ = {
 			isa = PBXGroup;
 			children = (
+				EFAFD46D1E87CE2E0077514A /* FindParticipant */,
 				EF796EE41E873ABA003961F8 /* BlankView */,
 				EF11F5441E8667BF009160C9 /* Send Form */,
 				107C50D81E85BFEE00FB85C0 /* Main List */,
 				EFE5464C1E85CA4000A7B7B6 /* Place Detail */,
 			);
 			name = "Screens-Controller-View-Cell";
+			sourceTree = "<group>";
+		};
+		EFAFD46D1E87CE2E0077514A /* FindParticipant */ = {
+			isa = PBXGroup;
+			children = (
+				EFAFD4721E87D08E0077514A /* Cell */,
+				EFAFD46E1E87CEA10077514A /* Controller_FindParticipant.swift */,
+				EFAFD4701E87CEB00077514A /* View_FindParticipant.swift */,
+			);
+			name = FindParticipant;
+			sourceTree = "<group>";
+		};
+		EFAFD4721E87D08E0077514A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EFAFD4731E87D0A30077514A /* Cell_FindParticipant.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		EFE546121E85C54F00A7B7B6 = {
@@ -525,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAFD4741E87D0A30077514A /* Cell_FindParticipant.swift in Sources */,
 				EFE5464E1E85CA6E00A7B7B6 /* View_PlaceDetail.swift in Sources */,
 				EFAA719F1E86DC4B000807FA /* UINavigationController+RadialTransaction.swift in Sources */,
 				EFE546211E85C54F00A7B7B6 /* Controller_Main.swift in Sources */,
@@ -537,6 +563,7 @@
 				107C50DC1E85C52100FB85C0 /* Cell_ML_TV_One.swift in Sources */,
 				EFAA71871E86A71D000807FA /* RequestConnection.swift in Sources */,
 				EFDDEB0E1E85ED6100097BA4 /* Cell_PD_TV_Inf_2.swift in Sources */,
+				EFAFD46F1E87CEA10077514A /* Controller_FindParticipant.swift in Sources */,
 				EFE546501E85CA7F00A7B7B6 /* Controller_PlaceDetail.swift in Sources */,
 				EFE5461F1E85C54F00A7B7B6 /* AppDelegate.swift in Sources */,
 				EFE5465A1E85DF6C00A7B7B6 /* Font.swift in Sources */,
@@ -547,6 +574,7 @@
 				EFE546561E85D29900A7B7B6 /* UTILS.swift in Sources */,
 				EF11F5461E8667CE009160C9 /* View_SendForm.swift in Sources */,
 				EF796EE31E873AB6003961F8 /* BlankView.swift in Sources */,
+				EFAFD4711E87CEB00077514A /* View_FindParticipant.swift in Sources */,
 				EFDDEB121E85FD1600097BA4 /* Cell_PD_TV_Review.swift in Sources */,
 				EFAA71971E86D58C000807FA /* ApiParse.swift in Sources */,
 				EFAA71931E86D474000807FA /* Place.swift in Sources */,
