@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BirdHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CWStatusBarNotification.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,17 +87,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>11660E00019CC67D06FF045455731568</key>
+		<key>1A1BD5DAC899727EEB27D91F58484CBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1F91A828A9DA37D697050A930965025E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6FF7DDEA4250FAA61DB29EF932F0B306</key>
+		<key>3C8E914452F2CDBFFA9BE8E4F0225F35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B91697DAF24B926CB1CCBD0677960950</key>
+		<key>AB4860277BD8BC07A31C205D9C540D44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B88258A021C2A1133191ABDE59FDA1D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB35FEEEA330E90C016DD3E79456501D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E50A1AB7D8E22475DCEF6D10A68E6DBE</key>
+		<key>C8DB8C237A5E7D4CAD457E41F905716A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -2,6 +2,7 @@ PODS:
   - ActionSheetPicker-3.0 (2.2.0)
   - Alamofire (3.4.1)
   - ASJTagsView (1.1)
+  - BirdHUD (1.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - ActionSheetPicker-3.0
   - Alamofire (= 3.4.1)
   - ASJTagsView
+  - BirdHUD
   - ChameleonFramework/Swift
   - CWStatusBarNotification
   - FlatColor
@@ -47,6 +49,7 @@ SPEC CHECKSUMS:
   ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ASJTagsView: fc7526f5d76fd2a07a011b232a03a6d2b0a9dad1
+  BirdHUD: c1f00c7a17d9b070740f66757083c437f83e013a
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CWStatusBarNotification: 3d2738b25c3207f60cc50201388d3c96182545ff
   FlatColor: a9cc6991f1c75a940df70109bdc34c5db341b8ee
@@ -59,6 +62,6 @@ SPEC CHECKSUMS:
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
   SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
 
-PODFILE CHECKSUM: c07633bc34990e3e41a9e8bfbfef4176119cc155
+PODFILE CHECKSUM: a0efffa58046b6c203d6516687acda93ac0004c2
 
 COCOAPODS: 1.0.1

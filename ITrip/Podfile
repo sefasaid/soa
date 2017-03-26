@@ -18,7 +18,7 @@ pod 'SwiftyJSON', '2.4.0'
 pod 'ReachabilitySwift', '~> 2.4'
 pod 'CWStatusBarNotification'
 pod 'SDWebImage', :git => 'https://github.com/rs/SDWebImage'
-
+pod 'BirdHUD'
 
 end
 #sudo gem install cocoapods -v 1.0.0

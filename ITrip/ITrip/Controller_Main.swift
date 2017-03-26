@@ -8,15 +8,21 @@
 
 import UIKit
 import SDWebImage
+import BirdHUD
+
 
 class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     var arr_Place = [Place]()
     var c_View : View_MainList?
     var blankPage : BlankView!
+    var hud = BirdHUD()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         
         self.c_View =  View_MainList(frame: self.view.frame)
@@ -52,6 +58,8 @@ class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSourc
     
     func getData(){
         
+        self.hud.startAnimation(self)
+        
         RequestConnection.sharedInstance(self).connectionGET("/place", parameter: "", complateBlock: { (json) in
             
             print(json)
@@ -62,15 +70,18 @@ class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSourc
                 }, error: { (message) in
                 
                     self.isBlankPage()
+                    self.hud.stopAnimation()
                     
                 }, end: { 
                     self.c_View?.tableView.reloadData()
+                    self.hud.stopAnimation()
                     
             })
             }) { (error) in
                 
                 self.isBlankPage()
                 print(error)
+                self.hud.stopAnimation()
                 
                 
         }
