@@ -18,6 +18,7 @@ class Controller_FindParticipant: UIViewController ,UITableViewDelegate,UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Gezmek Istiyenler"
         c_View = View_FindParticipant(frame: self.view.frame, target: self)
         
         self.view.addSubview(c_View!)

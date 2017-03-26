@@ -235,7 +235,7 @@ class OOETag :UICollectionView,UICollectionViewDataSource,UICollectionViewDelega
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-            if(indexPath.section == 0){
+            if(indexPath.section == 0 && self.tagStatus){
                 OOETag.removeAtIndex(indexPath.row)
                 self.reloadData()
                 OOEdelegate?.returnSelectedTag(OOETag)

@@ -23,7 +23,7 @@ class Controller_Main: UIViewController,UITableViewDelegate,UITableViewDataSourc
         super.viewDidLoad()
         
         
-        
+        self.hud.changeText("Yükleniyor")
         
         self.c_View =  View_MainList(frame: self.view.frame)
         c_View!.setup(self)
