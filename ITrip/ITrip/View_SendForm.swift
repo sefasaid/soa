@@ -97,7 +97,7 @@ class View_SendForm : UIView{
             make.top.equalTo(tags!.snp_bottom)
             make.left.equalTo(self).offset(64)
         }
-        btn_data.setTitle("Tarih Belirle", forState: .Normal)
+        btn_data.setTitle(localized("btn_data"), forState: .Normal)
         btn_data.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         btn_data.backgroundColor = UIColor.flatSkyBlueColor()
         btn_data.addTarget(self.target, action: "actionForDate:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -111,7 +111,7 @@ class View_SendForm : UIView{
             make.top.equalTo(self).offset(420)
             make.centerX.equalTo(self)
         }
-        btn_complete.setTitle("Tamamla", forState: .Normal)
+        btn_complete.setTitle(localized("btn_complete"), forState: .Normal)
         btn_complete.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         btn_complete.backgroundColor = UIColor.flatSkyBlueColor()
         btn_complete.layer.cornerRadius = self.frame.width/16

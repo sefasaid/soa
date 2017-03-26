@@ -205,7 +205,9 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func actionForCall(sender:UIButton){
-    
+        let phone = "tel://905448572632";
+        let url:NSURL = NSURL(string:phone)!;
+        UIApplication.sharedApplication().openURL(url);
     }
     
     func actionForMap(sender:UIButton){
