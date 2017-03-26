@@ -10,13 +10,13 @@ import UIKit
 import SnapKit
 
 
-class Cell_FindParticipant: UITableViewCell {
+class Cell_FindParticipant: UITableViewCell,TagDelegate {
     
     var img_UserProfile     = UIImageView()
     var lbl_UserName        = UILabel()
     var lbl_Message         = UILabel()
     var lbl_UserTags        = UILabel()
-    var tags = OOETag?
+    var tags : OOETag!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -64,10 +64,21 @@ class Cell_FindParticipant: UITableViewCell {
         lbl_Message.font = UIFont.appFont(11)
         lbl_Message.textColor = UIColor.flatGrayColor()
         lbl_Message.numberOfLines = 5
+        layoutIfNeeded()
+        layoutSubviews()
         
+        self.tags = OOETag(frame: CGRect(x: 90, y: 95, width: self.frame.width, height: 25), collectionViewLayout: UICollectionViewLayout())
+        self.tags.clipsToBounds = false
+        self.tags.cellBackGroundColor = 0x3599DB
+        self.tags.tagTitleColor = 0x3599DB
+        self.tags.OOEdelegate = self
+        self.tags.tagStatus = false
+        self.tags.setAddTagArray(["merhaba","arkadaş","gezmek","yemek"])
+        self.addSubview(self.tags)
         
-        
-        
+    }
+    
+    func returnSelectedTag(tag: [String]) {
         
     }
         

@@ -89,13 +89,6 @@ class OOETag :UICollectionView,UICollectionViewDataSource,UICollectionViewDelega
     }
     
     
-    
-    
-    
-    
-    
-    
-    
     func setAddTag(tag:String){
         if let index = OOETag.indexOf(tag)//find(OOETag, tag)
         {
