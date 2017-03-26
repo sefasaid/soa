@@ -115,6 +115,7 @@ class View_SendForm : UIView{
         btn_complete.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         btn_complete.backgroundColor = UIColor.flatSkyBlueColor()
         btn_complete.layer.cornerRadius = self.frame.width/16
+        btn_complete.addTarget(target, action: "actionForJoin:", forControlEvents: UIControlEvents.TouchUpInside)
         
     }
 

@@ -89,6 +89,9 @@ class Controller_SendForm: UIViewController,TagDelegate {
         
     }
 
+    func actionForJoin(sender:UIButton){
+    self.navigationController?.pushViewController(Controller_FindParticipant(), animated: true)
+    }
   
 }
 
