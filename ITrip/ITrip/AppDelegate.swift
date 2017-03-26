@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configurationApi.port = ":1453"
         configurationApi.version = ""
       
-        let backImg: UIImage = UIImage(named: "back_button")!
-        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backImg, forState: .Normal, barMetrics: .Default)
         
 
         

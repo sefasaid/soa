@@ -12,9 +12,7 @@ import UIKit
 
 class Cell_PD_CV_Images: UICollectionViewCell {
  
-    
     var img_BackGround = UIImageView()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,8 +22,6 @@ class Cell_PD_CV_Images: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
     
     func setCreateUI(){
     

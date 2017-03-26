@@ -92,7 +92,7 @@ class RequestConnection {
             }
         }else{
             
-            self.target!.notificationNavigationBar(localized("NO_NET"), backColor: UIColor.flatPinkColor())
+            self.target!.notificationNavigationBar(localized("NO_NET"), backColor: UIColor.flatRedColor())
 
         }
     }
@@ -130,7 +130,8 @@ class RequestConnection {
                 }
             }
         }else{
-            self.target!.notificationNavigationBar(localized("NO_NET"), backColor: UIColor.flatPinkColor())
+            self.target!.notificationNavigationBar(localized("NO_NET"), backColor: UIColor.flatRedColor())
+            errorBlock(error: NSError(domain: "doman", code: 20, userInfo: ["hata":"hata"]))
         }
         
     }

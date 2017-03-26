@@ -12,7 +12,6 @@ import UIKit
 class View_SendForm : UIView{
 
     var target:Controller_SendForm?
-    
     var tags : OOETag?
     var txt_View_Desc = UITextView()
     var img_TVD = UIImageView()
@@ -21,7 +20,7 @@ class View_SendForm : UIView{
     var img_data = UIImageView()
     var btn_complete = UIButton()
     
-     init(frame: CGRect,target:Controller_SendForm) {
+    init(frame: CGRect,target:Controller_SendForm) {
         super.init(frame: frame)
         
         
@@ -44,7 +43,7 @@ class View_SendForm : UIView{
         img_TVD.snp_makeConstraints { (make) in
             make.width.equalTo(32)
             make.height.equalTo(128)
-            make.top.equalTo(self)
+            make.top.equalTo(self).offset(64)
             make.left.equalTo(self).offset(16)
         }
         img_TVD.image = UIImage(named: "About")
@@ -54,7 +53,7 @@ class View_SendForm : UIView{
         txt_View_Desc.snp_makeConstraints { (make) in
             make.left.equalTo(self).offset(64)
             make.right.equalTo(self)
-            make.top.equalTo(self)
+            make.top.equalTo(self).offset(65)
             make.height.equalTo(128)
         }
         txt_View_Desc.backgroundColor = UIColor.hexColor(0xbdc3c7)
@@ -64,12 +63,12 @@ class View_SendForm : UIView{
         img_TVT.snp_makeConstraints { (make) in
             make.width.equalTo(32)
             make.height.equalTo(48)
-            make.top.equalTo(self).offset(128)
+            make.top.equalTo(self).offset(192)
             make.left.equalTo(self).offset(16)
         }
         img_TVT.image = UIImage(named: "tag")
         img_TVT.contentMode = UIViewContentMode.ScaleAspectFit
-        self.tags = OOETag(frame: CGRectMake(64, 128, self.frame.width-64, 48), collectionViewLayout: UICollectionViewLayout())
+        self.tags = OOETag(frame: CGRectMake(64, 192, self.frame.width-64, 48), collectionViewLayout: UICollectionViewLayout())
         self.tags!.backgroundColor = UIColor.clearColor()
         self.tags!.clipsToBounds = false
         self.tags!.cellBackGroundColor = 0x3599DB 
@@ -83,7 +82,7 @@ class View_SendForm : UIView{
         img_data.snp_makeConstraints{ (make) in
             make.width.equalTo(32)
             make.height.equalTo(48)
-            make.top.equalTo(self).offset(176)
+            make.top.equalTo(self).offset(240)
             make.left.equalTo(self).offset(16)
         }
         img_data.image = UIImage(named: "date")

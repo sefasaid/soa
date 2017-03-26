@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		107C50DA1E85C03700FB85C0 /* View_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50D91E85C03700FB85C0 /* View_Main.swift */; };
-		107C50DC1E85C52100FB85C0 /* Cell_MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50DB1E85C52100FB85C0 /* Cell_MainList.swift */; };
+		107C50DA1E85C03700FB85C0 /* View_MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50D91E85C03700FB85C0 /* View_MainList.swift */; };
+		107C50DC1E85C52100FB85C0 /* Cell_ML_TV_One.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C50DB1E85C52100FB85C0 /* Cell_ML_TV_One.swift */; };
 		E1B24EA8BF2EFFFC28CC5AD4 /* Pods_ITrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1AA84218DDE9E7FDA336D3 /* Pods_ITrip.framework */; };
 		EF11F5461E8667CE009160C9 /* View_SendForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF11F5451E8667CE009160C9 /* View_SendForm.swift */; };
 		EF11F5481E8667D8009160C9 /* Controller_SendForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF11F5471E8667D8009160C9 /* Controller_SendForm.swift */; };
@@ -16,6 +16,7 @@
 		EF11F5541E8675D3009160C9 /* cellFilterTagForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF11F5521E8675D3009160C9 /* cellFilterTagForm.swift */; };
 		EF11F5551E8675D3009160C9 /* cellFilterForTagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF11F5531E8675D3009160C9 /* cellFilterForTagTextField.swift */; };
 		EF796EDD1E8728A6003961F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF796EDF1E8728A6003961F8 /* Localizable.strings */; };
+		EF796EE31E873AB6003961F8 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF796EE21E873AB6003961F8 /* BlankView.swift */; };
 		EFAA71871E86A71D000807FA /* RequestConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA71861E86A71D000807FA /* RequestConnection.swift */; };
 		EFAA71931E86D474000807FA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA71921E86D474000807FA /* Place.swift */; };
 		EFAA71971E86D58C000807FA /* ApiParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA71961E86D58C000807FA /* ApiParse.swift */; };
@@ -59,8 +60,8 @@
 
 /* Begin PBXFileReference section */
 		102F1AA11E85E2B1007143B1 /* ITrip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ITrip-Bridging-Header.h"; sourceTree = "<group>"; };
-		107C50D91E85C03700FB85C0 /* View_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View_Main.swift; sourceTree = "<group>"; };
-		107C50DB1E85C52100FB85C0 /* Cell_MainList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_MainList.swift; sourceTree = "<group>"; };
+		107C50D91E85C03700FB85C0 /* View_MainList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View_MainList.swift; sourceTree = "<group>"; };
+		107C50DB1E85C52100FB85C0 /* Cell_ML_TV_One.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_ML_TV_One.swift; sourceTree = "<group>"; };
 		51AC133DD9CBDA79772F0E9B /* Pods-ITrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITrip/Pods-ITrip.release.xcconfig"; sourceTree = "<group>"; };
 		6D1AA84218DDE9E7FDA336D3 /* Pods_ITrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C73859EE163354D416212DA /* Pods-ITrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITrip/Pods-ITrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		EF796EDE1E8728A6003961F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF796EE01E8728AE003961F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF796EE11E8728C3003961F8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF796EE21E873AB6003961F8 /* BlankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		EFAA71861E86A71D000807FA /* RequestConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConnection.swift; sourceTree = "<group>"; };
 		EFAA71921E86D474000807FA /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		EFAA71961E86D58C000807FA /* ApiParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiParse.swift; sourceTree = "<group>"; };
@@ -135,14 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		107C50D81E85BFEE00FB85C0 /* Main */ = {
+		107C50D81E85BFEE00FB85C0 /* Main List */ = {
 			isa = PBXGroup;
 			children = (
-				107C50D91E85C03700FB85C0 /* View_Main.swift */,
+				EF796EE51E87426E003961F8 /* Cell */,
+				107C50D91E85C03700FB85C0 /* View_MainList.swift */,
 				EFE546201E85C54F00A7B7B6 /* Controller_Main.swift */,
-				107C50DB1E85C52100FB85C0 /* Cell_MainList.swift */,
 			);
-			name = Main;
+			name = "Main List";
 			sourceTree = "<group>";
 		};
 		56DA7A2C33045175944290B0 /* Pods */ = {
@@ -169,13 +171,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EF11F5441E8667BF009160C9 /* SendForm */ = {
+		EF11F5441E8667BF009160C9 /* Send Form */ = {
 			isa = PBXGroup;
 			children = (
 				EF11F5451E8667CE009160C9 /* View_SendForm.swift */,
 				EF11F5471E8667D8009160C9 /* Controller_SendForm.swift */,
 			);
-			name = SendForm;
+			name = "Send Form";
 			sourceTree = "<group>";
 		};
 		EF11F54E1E8672F7009160C9 /* TagController */ = {
@@ -194,6 +196,22 @@
 				EF11F5531E8675D3009160C9 /* cellFilterForTagTextField.swift */,
 			);
 			name = CELL;
+			sourceTree = "<group>";
+		};
+		EF796EE41E873ABA003961F8 /* BlankView */ = {
+			isa = PBXGroup;
+			children = (
+				EF796EE21E873AB6003961F8 /* BlankView.swift */,
+			);
+			name = BlankView;
+			sourceTree = "<group>";
+		};
+		EF796EE51E87426E003961F8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				107C50DB1E85C52100FB85C0 /* Cell_ML_TV_One.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		EFAA71881E86AC01000807FA /* Model */ = {
@@ -226,9 +244,10 @@
 		EFAA71A11E86DC8B000807FA /* Screens-Controller-View-Cell */ = {
 			isa = PBXGroup;
 			children = (
-				EF11F5441E8667BF009160C9 /* SendForm */,
-				107C50D81E85BFEE00FB85C0 /* Main */,
-				EFE5464C1E85CA4000A7B7B6 /* PlaceDetail */,
+				EF796EE41E873ABA003961F8 /* BlankView */,
+				EF11F5441E8667BF009160C9 /* Send Form */,
+				107C50D81E85BFEE00FB85C0 /* Main List */,
+				EFE5464C1E85CA4000A7B7B6 /* Place Detail */,
 			);
 			name = "Screens-Controller-View-Cell";
 			sourceTree = "<group>";
@@ -288,14 +307,14 @@
 			path = ITripUITests;
 			sourceTree = "<group>";
 		};
-		EFE5464C1E85CA4000A7B7B6 /* PlaceDetail */ = {
+		EFE5464C1E85CA4000A7B7B6 /* Place Detail */ = {
 			isa = PBXGroup;
 			children = (
 				EFE546511E85D20300A7B7B6 /* Cell */,
 				EFE5464D1E85CA6E00A7B7B6 /* View_PlaceDetail.swift */,
 				EFE5464F1E85CA7F00A7B7B6 /* Controller_PlaceDetail.swift */,
 			);
-			name = PlaceDetail;
+			name = "Place Detail";
 			sourceTree = "<group>";
 		};
 		EFE546511E85D20300A7B7B6 /* Cell */ = {
@@ -515,7 +534,7 @@
 				EFAA719E1E86DC4B000807FA /* AAPTransactionDirector.swift in Sources */,
 				EFDDEB101E85FCE800097BA4 /* Lib.swift in Sources */,
 				EF11F5501E867317009160C9 /* OOETag.swift in Sources */,
-				107C50DC1E85C52100FB85C0 /* Cell_MainList.swift in Sources */,
+				107C50DC1E85C52100FB85C0 /* Cell_ML_TV_One.swift in Sources */,
 				EFAA71871E86A71D000807FA /* RequestConnection.swift in Sources */,
 				EFDDEB0E1E85ED6100097BA4 /* Cell_PD_TV_Inf_2.swift in Sources */,
 				EFE546501E85CA7F00A7B7B6 /* Controller_PlaceDetail.swift in Sources */,
@@ -523,10 +542,11 @@
 				EFE5465A1E85DF6C00A7B7B6 /* Font.swift in Sources */,
 				EFAA71A01E86DC4B000807FA /* UIView+Radial.swift in Sources */,
 				EF11F5551E8675D3009160C9 /* cellFilterForTagTextField.swift in Sources */,
-				107C50DA1E85C03700FB85C0 /* View_Main.swift in Sources */,
+				107C50DA1E85C03700FB85C0 /* View_MainList.swift in Sources */,
 				EFE546531E85D28600A7B7B6 /* Cell_PD_TV_Inf.swift in Sources */,
 				EFE546561E85D29900A7B7B6 /* UTILS.swift in Sources */,
 				EF11F5461E8667CE009160C9 /* View_SendForm.swift in Sources */,
+				EF796EE31E873AB6003961F8 /* BlankView.swift in Sources */,
 				EFDDEB121E85FD1600097BA4 /* Cell_PD_TV_Review.swift in Sources */,
 				EFAA71971E86D58C000807FA /* ApiParse.swift in Sources */,
 				EFAA71931E86D474000807FA /* Place.swift in Sources */,

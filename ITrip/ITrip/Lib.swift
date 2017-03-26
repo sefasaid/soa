@@ -62,7 +62,25 @@ extension UIViewController{
             notif.dismissNotification()
         }
     }
-
+    
+    
     
 }
+
+extension UIImageView{
+    
+
+    func setRadius(cornerRadius:CGFloat,clipsToBounds:Bool,borderWidth:CGFloat,borderColor:UIColor) -> UIImageView{
+        
+        self.layer.cornerRadius = cornerRadius
+        self.clipsToBounds = clipsToBounds
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = borderColor.CGColor
+        
+        return self
+        
+    }
+    
+}
+
 

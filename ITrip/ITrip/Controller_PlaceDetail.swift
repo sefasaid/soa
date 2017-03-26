@@ -16,8 +16,6 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
     var s_Arr = [String]()
     var place = Place()
     
-    
-    
     init(place:Place){
         super.init(nibName: nil, bundle: nil)
     
@@ -30,6 +28,18 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let btnName = UIButton()
+        btnName.setImage(UIImage(named: "left"), forState: .Normal)
+        btnName.frame = CGRectMake(0, 0, 30, 30)
+        btnName.addTarget(self, action: "actionForLeft:", forControlEvents: .TouchUpInside)
+        
+        //.... Set Right/Left Bar Button item
+        let rightBarButton = UIBarButtonItem()
+        rightBarButton.customView = btnName
+        self.navigationItem.leftBarButtonItem = rightBarButton
+        
 
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
@@ -38,23 +48,9 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         self.navigationBackGroundColor(UIColor.clearColor(), tintC: UIColor.whiteColor())
         
         self.navigationController!.navigationBar.topItem!.title = "";
-        
-        s_Arr.append("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
-        s_Arr.append("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons")
-        s_Arr.append("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ")
-        s_Arr.append("Lorem is aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
-        s_Arr.append("Lorem ipsum doxcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
-        s_Arr.append("d est laborum")
-        s_Arr.append("Lorem ipsum aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
-        s_Arr.append("Lorem ipsum dolor sit amet,                                                                                                                                                                                                                          consectetur adipiscing elit, sed do eiu  \n                                                                                                                                                                                                                       smod tempor incididunt ut labore et  \n                                                                                                                                                                                                                        dolore magna aliqua.L    \n                                                                    orem ipsum dolor sit amet, consectetur                                                                                                                                                                                                                          adipiscing elit, sed do eiusmod                                                                                                                                                                                                                          tempor incididunt ut labore et dolor                                                                                                            e magna aliqua. Ut\n                                                                                           enim ad minim veniam,                                                                                                                                                            qu\n                                                                                                                                                                                                                                                                               is nostrud exercitation                                                                                                                                                                                                                                                         ullamco laboris nisi ut                                                                                              aliquip ex ea com                                                                                                                            modo consequat. Duis aute irure dolo                                                                                          r in reprehenderit                                                                                           in\n                                                                                                                               voluptate velit esse cillu                                                                                                                            m dolore eu fugiat nulla pa                                                                                                                            riatur. Excepteur sint occae                                                                                                                            cat cupidatat non proident,                                                                                                                                                            sunt in\n culpa                                                                                                                               qui officia\n                                                                                                                                                                                                                                                         deserunt mollit\n                                                                                                                               anim id est laborum")
-        
-        
-        
+    
         self.c_View = View_PlaceDetail(frame: self.view.frame, target: self)
         self.view.addSubview(self.c_View!)
-        
-        
-        
         self.c_View?.lbl_Title.text = self.place.name
         self.getData()
         
@@ -78,18 +74,15 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = nil
         self.navigationController!.navigationBar.translucent = false
-        self.navigationBackGroundColor(UIColor.grayColor(), tintC: UIColor.whiteColor())
-        
-        
     }
     
-    
+    //:MARK - Server Connection
     
     func getData(){
     
     RequestConnection.sharedInstance(self).connectionGET("/place/\(self.place.id)", parameter: "?populate=comments", complateBlock: { (json) in
         
-        print(json)
+            print(json)
             ApiParse.parseComment(self, json: json, complate: { (comment) in
                 
                 self.place.comments.append(comment)
@@ -174,17 +167,17 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
         return 0
         
     }
-    
-    
+
     //:MARK - CollectionView DataSource & Delegate
-    
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.place.images.count
     }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CELL_PD_CV_IMAGES, forIndexPath: indexPath) as! Cell_PD_CV_Images
         
@@ -206,14 +199,24 @@ class Controller_PlaceDetail: UIViewController,UITableViewDelegate,UITableViewDa
     func actionForGoAndFind(sender:UIButton){
     
         
-        self.navigationController?.pushViewController(Controller_SendForm(), animated: true)
+        self.navigationController?.radialPushViewController(Controller_SendForm(), duration: 0.5, startFrame: CGRect(x: self.view.frame.width/2, y: self.view.frame.height/2, width: 5, height: 5), transitionCompletion: {
+            
+        })
     }
+    
     func actionForCall(sender:UIButton){
     
     }
+    
     func actionForMap(sender:UIButton){
         let url = "http://maps.apple.com/maps?saddr=\(place.geo.latitude),\(place.geo.longitude)"
         UIApplication.sharedApplication().openURL(NSURL(string:url)!)
+    }
+    
+    func actionForLeft(sender:UIButton){
+    
+        self.navigationController?.popViewControllerAnimated(true)
+    
     }
     
     //:MARK - Scrollview Delegate
