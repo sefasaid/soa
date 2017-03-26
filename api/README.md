@@ -4,6 +4,12 @@
 
 Bu api getir & bitaksi hackatonu için yazıldı
 
+# Ekip
+
+- [Sefa Said Deniz](https://www.linkedin.com/in/sefa-said-deniz/) -> Api yapımı
+- [Orhan Özgün Ergen](https://www.linkedin.com/in/ooergen/) -> ios app yapımı
+- [Ahmet Saday](https://www.linkedin.com/in/ahmet-saday-1779b97b/) -> ios app yapımı
+
 # Api Özellikleri
 
   - MongoDb bağlantısı
@@ -167,16 +173,67 @@ endpoint olarak /comment kullanıyoruz
 
 Comment tek başına kullanılmayacak çünkü konumları çekerken içinde hazır olarak geliyor. Bu yüzden tek başına kullanılması gereksiz
 
+
+# Yükleme
+
+Önce zip olarak indirin yahut projeyi kopyalayın
+
+Daha sonra gerekli npm modüllerini yükleyin
+
+```sh
+npm install
+```
+
+Daha sonra çalıştırın
+
+```sh
+node app.js
+```
+
+Forever ile arkaplanda çalıştırmak için
+```sh
+forever start app.js
+```
 # Kullanılan paketler
 - [node-restful](https://github.com/baugarten/node-restful)(zaten çoğu işi yapan paket :) )
 - [mongoose](https://github.com/Automattic/mongoose) 
 - [express](https://github.com/expressjs/express)
 - [body-parser](https://github.com/expressjs/body-parser)
+- [node-redis](https://github.com/NodeRedis/node_redis) (Redis bilgisayarda yüklü ve çalışır olmalı)
 
-# Dumy data alınan yer
+# Dummy data alınan yer
 - user için [randomuser.me](https://randomuser.me)
-- lokasyon için 
+
+
+# Dummy data ekleme
+
+Bunun için 3 farklı js dosyası mevcut
+
+ilk önce usersBot.js çalıştırılmalı !!
+
+bu bot randomuser içinden 5000 tane kullanıcı alıp mongodb ye kaydediyor.
+
+çalıştırmak için
+
+```sh
+node usersBot.js
+```
+
+Daha sonra tag(etiket) eklemeniz lazım.
+
+Ekledikten sonra kullanıcılara random etiket ataması yapabiliriz. Bunun için
+```sh
+node addTagToUsers.js
+```
+
+Konumlara rastgele yorumlar eklemek için ise
+```sh
+node addDumyComments.js
+```
+yazmanız yeterli. Bu js dosyası veritabanında var olan bütün konumlara yine aynı şekilde veritabanında var olan 
+kullanıcılardan seçerek önceden belirlenen rastgele yorumları yapmasını sağlıyor. 
 
 # Teşekkürler
 [getir](https://getir.com/) & [bitaksi](http://www.bitaksi.com/)
+
 
