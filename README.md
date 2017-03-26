@@ -14,5 +14,3 @@ Bu kodlar getir & bitaksi hackatonu için yazıldı
 
 # Teşekkürler
 [getir](https://getir.com/) & [bitaksi](http://www.bitaksi.com/)
-
->>>>>>> origin/master
