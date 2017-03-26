@@ -11,6 +11,12 @@ import UIKit
 
 class Cell_FindParticipant: UITableViewCell {
     
+    var img_UserProfile     = UIImageView()
+    var lbl_UserName        = UILabel()
+    var lbl_Message         = UILabel()
+    var lbl_UserTags        = UILabel()
+    
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -27,6 +33,9 @@ class Cell_FindParticipant: UITableViewCell {
     
     func setCreateUI(){
     
+        self.addSubview(self.img_UserProfile)
+        
+        
     }
         
 }

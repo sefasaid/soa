@@ -31,14 +31,19 @@ class View_FindParticipant:UIView{
     func setCreateUI(){
     
     
-        
+        self.backgroundColor = UIColor.whiteColor()
         
         self.addSubview(self.tableView)
+        self.tableView.snp_makeConstraints { (make) in
+            make.width.equalTo(self)
+            make.height.equalTo(self)
+            make.center.equalTo(self)
+        }
         self.tableView.delegate = target
         self.tableView.dataSource = target
         self.tableView.rowHeight = 120
-        self.tableView.registerClass(Cell_FindParticipant.self, forCellReuseIdentifier: CELL_FP_ONE)
-        
+        self.tableView.registerClass(Cell_FindParticipant.self, forCellReuseIdentifier: CELL_FP_TV_ONE)
+        self.tableView.backgroundColor = UIColor.whiteColor()
         
         
     }

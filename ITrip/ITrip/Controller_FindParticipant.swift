@@ -19,6 +19,7 @@ class Controller_FindParticipant: UIViewController ,UITableViewDelegate,UITableV
         super.viewDidLoad()
         
         c_View = View_FindParticipant(frame: self.view.frame, target: self)
+        
         self.view.addSubview(c_View!)
     }
     
@@ -37,7 +38,7 @@ class Controller_FindParticipant: UIViewController ,UITableViewDelegate,UITableV
         return 10
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_FP_ONE, forIndexPath: indexPath) as! Cell_FindParticipant
+        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_FP_TV_ONE, forIndexPath: indexPath) as! Cell_FindParticipant
         
         
         return cell
